@@ -5,7 +5,7 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center tracking-tight w-full gap-x-12 py-6 px-8 md:px-10">
+    <nav className="flex justify-between items-center bg-[#01050b] tracking-tight w-full gap-x-12 py-6 px-8 md:px-10">
       <section>
         <Link to="/">
           <h1 className="text-2xl font-semibold w-fit">Magno</h1>
@@ -14,7 +14,7 @@ export function Navbar() {
       <section
         className={`${
           menuOpen ? `left-0 px-8 pt-8 gap-6 z-40 ease-out duration-100 lg:pt-0` : `-left-full lg:left-0`
-        } absolute top-0 bg-black lg:bg-transparent lg:relative h-screen lg:h-fit w-full lg:w-fit ease-in-out flex flex-col lg:flex-row lg:gap-12 lg:justify-between lg:items-center text-base md:text-lg`}
+        } absolute top-0 bg-[#01050b] lg:bg-transparent lg:relative h-screen lg:h-fit w-full lg:w-fit ease-in-out flex flex-col lg:flex-row lg:gap-12 lg:justify-between lg:items-center text-base md:text-lg`}
       >
         {/* close button */}
         <div

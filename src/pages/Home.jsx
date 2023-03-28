@@ -5,10 +5,10 @@ import { HowItWorks } from "../components/HowItWorks";
 
 export default function Home() {
   return (
-    <div className="mt-10 flex flex-col gap-8">
+    <div className="bg-[#01050b] flex flex-col ">
       <HeroSection />
-      <div className="text-center px-6 py-8">
-        <h2 className="text-xl mb-3">Bringing people closer</h2>
+      <div className="text-center px-6 py-6">
+        <h2 className="text-xl mb-3 capitalize">Bringing people closer</h2>
         <p className="">
           We host a wide variety of events and activities throughout the year.
           Get to meet people and build connections through our social events.
@@ -18,11 +18,13 @@ export default function Home() {
       {/* What you get */}
       <Benefits />
 
-      {/* Our events & activities */}
-      <Activities />
+      <div className="bg-[#13171a]">
+        {/* Our events & activities */}
+        <Activities />
 
-      {/* How it works */}
-      <HowItWorks />
+        {/* How it works */}
+        <HowItWorks />
+      </div>
       {/* Get Involved */}
       <div className="">
         <h2>Get Involved</h2>
