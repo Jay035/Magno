@@ -1,22 +1,36 @@
+import formIcon from "../assets/form icon.png";
+
 export function HowItWorks() {
   return (
     <div className="py-6 px-6 ">
-      <h2 className="text-xl capitalize text-center mb-3">How it works</h2>
-      <div className="grid">
+      <h2 className="text-center text-2xl capitalize mb-4 font-medium">How it works</h2>
+      <div className="grid gap-4 bg-[#1d2029] py-10 mx-6 rounded-lg">
         {/* card 1 */}
-        <div className="">
+        <div className=" py-2 px-4 text-center">
+          <div className="bg-[#262932] flex justify-center items-center mb-4 rounded-lg py-4 max-w-[200px] mx-auto">
+            <img src={formIcon} alt="form icon" className="w-16" />
+          </div>
           {/* <span>Step One</span> */}
-          <p> Register by filling the sign up form</p>
+          <h2 className="text-white">Register</h2>
+          <p className="text-white/80 text-xs"> Register by filling the sign up form</p>
         </div>
         {/* card 2 */}
-        <div className="">
+        <div className=" py-2 px-4 text-center">
+          <div className="bg-[#262932] flex justify-center items-center mb-4 rounded-lg py-4 max-w-[200px] mx-auto">
+            <img src={formIcon} alt="form icon" className="w-16" />
+          </div>
           {/* <span>Step Two</span> */}
-          <p>Activate subscription </p>
+          <h2 className="text-white">Activate Subscription</h2>
+          <p className="text-white/80 text-xs">Activate subscription  lrorghgjufj</p>
         </div>
         {/* card 3 */}
-        <div className="">
+        <div className=" py-2 px-4 text-center">
+          <div className="bg-[#262932] flex justify-center items-center mb-4 rounded-lg py-4 max-w-[200px] mx-auto">
+            <img src={formIcon} alt="form icon" className="w-16" />
+          </div>
           {/* <span>Step Three</span> */}
-          <p>Enjoy access to our social events and activities</p>
+          <h2 className="text-white"> Access to our social events and activities</h2>
+          <p className="text-white/80 text-xs">Enjoy access to our social events and activities</p>
         </div>
       </div>
     </div>

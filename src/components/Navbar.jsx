@@ -5,10 +5,10 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center bg-[#01050b] tracking-tight w-full gap-x-12 py-6 px-8 md:px-10">
+    <nav className="flex justify-between items-center bg-[#11141d] tracking-tight w-full gap-x-12 py-6 px-8 md:px-10">
       <section>
         <Link to="/">
-          <h1 className="text-2xl font-semibold w-fit">Magno</h1>
+          <h1 id="logo" className="text-2xl font-semibold w-fit">Magno</h1>
         </Link>
       </section>
       <section
