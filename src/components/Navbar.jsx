@@ -59,14 +59,14 @@ export function Navbar() {
         <NavLink
           to="/login"
           activestyle={{ color: "#ffffff" }}
-          className="border border-[#febf4d] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#febf4d]/75"
+          className="border border-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#febf4d]/75"
         >
           Login
         </NavLink>
         <NavLink
           to="/signup"
           activestyle={{ color: "#ffffff" }}
-          className="  bg-[#febf4d] w-28 text-center text-black px-6 py-[10px] rounded hover:bg-[#febf4d]/75"
+          className="  bg-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#febf4d]/75"
         >
           Sign up
         </NavLink>
@@ -78,14 +78,14 @@ export function Navbar() {
         <NavLink
           to="/login"
           activestyle={{ color: "#ffffff" }}
-          className=" border border-[#febf4d] text-white px-6 py-[10px] rounded hover:bg-[#febf4d]/75"
+          className=" border border-[#ef5b44] text-white px-6 py-[10px] rounded hover:bg-[#febf4d]/75"
         >
           Login
         </NavLink>
         <NavLink
           to="/signup"
           activestyle={{ color: "#ffffff" }}
-          className="   bg-[#febf4d] text-black px-6 py-[10px] rounded hover:bg-[#febf4d]/75"
+          className="   bg-[#ef5b44] text-white px-6 py-[10px] rounded hover:bg-[#febf4d]/75"
         >
           Sign up
         </NavLink>
