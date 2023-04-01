@@ -42,7 +42,7 @@ export function Benefits() {
             Build a network{" "}
           </h5>
           <p className="text-sm text-[#7a7c86]">
-            <span className="text-white/70 font-medium">Magno</span> perfect
+            <span className="text-white/70 font-medium">Magno</span> is the perfect
             place to connect with like-minded individuals and expand your
             professional circle. Join us today and start building the network
             you need to achieve your goals!
@@ -54,7 +54,7 @@ export function Benefits() {
             Relax, expand your horizon and have fun{" "}
           </h5>
           <p className="text-sm text-[#7a7c86]">
-            <span className="text-white/70 font-medium">Magno</span> perfect
+            <span className="text-white/70 font-medium">Magno</span> is the perfect
             place to unwind, explore new interests, and connect with others who
             share your passion for life. With engaging content, interactive
             activities, and a supportive community of members, you'll be able to
