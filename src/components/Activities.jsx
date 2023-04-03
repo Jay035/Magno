@@ -23,61 +23,61 @@ export function Activities() {
       <Slider {...settings}>
         <div className="relative">
           <img src={img1} alt="img" />
-          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/80 w-full  h-full items-center text-white">
+          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
             <h1 className="text-2xl">Parties</h1>
           </div>
         </div>
         <div className="relative">
           <img src={img1} alt="img" />
-          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/80 w-full  h-full items-center text-white">
+          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
             <h1 className="text-2xl">Hangouts</h1>
           </div>
         </div>
         <div className="relative">
           <img src={img1} alt="img" />
-          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/80 w-full  h-full items-center text-white">
+          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
             <h1 className="text-2xl">Movie dates</h1>
           </div>
         </div>
         <div className="relative">
           <img src={img1} alt="img" />
-          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/80 w-full  h-full items-center text-white">
+          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
             <h1 className="text-2xl">Concerts </h1>
           </div>
         </div>
         <div className="relative">
           <img src={img1} alt="img" />
-          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/80 w-full  h-full items-center text-white">
+          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
             <h1 className="text-2xl">Sporting activities </h1>
           </div>
         </div>
         <div className="relative">
           <img src={img1} alt="img" />
-          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/80 w-full  h-full items-center text-white">
+          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
             <h1 className="text-2xl">Video games</h1>
           </div>
         </div>
         <div className="relative">
           <img src={img1} alt="img" />
-          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/80 w-full  h-full items-center text-white">
+          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
             <h1 className="text-2xl">Board games </h1>
           </div>
         </div>
         <div className="relative">
           <img src={img1} alt="img" />
-          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/80 w-full  h-full items-center text-white">
+          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
             <h1 className="text-2xl">Painting </h1>
           </div>
         </div>
         <div className="relative">
           <img src={img1} alt="img" />
-          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/80 w-full  h-full items-center text-white">
+          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
             <h1 className="text-2xl">Excursions</h1>
           </div>
         </div>
         <div className="relative">
           <img src={img1} alt="img" />
-          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/80 w-full  h-full items-center text-white">
+          <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
             <h1 className="text-2xl">Workshops</h1>
           </div>
         </div>

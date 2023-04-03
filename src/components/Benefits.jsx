@@ -5,12 +5,12 @@ import illustration4 from "../assets/illustration-4.png";
 
 export function Benefits() {
   return (
-    <div className=" py-6 px-4 ">
+    <div className=" py-6 px-4 bg-[#1d2029]">
       <h2 className="text-center text-2xl capitalize mb-6 font-medium">
         What you get
       </h2>
-      <div className="grid gap-6 md:grid-cols-2 bg-[#1d2029] py-10 mx-6 rounded-lg">
-        <div className="pt-4 pb-2 px-6">
+      <div className="grid gap-6 md:grid-cols-2 py-10 mx-6 rounded-lg">
+        <div className="pt-4 pb-10 border-b border-[#7a7c8670]">
           <img src={illustration1} alt="illustration" className="w-32" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
             Meet new people{" "}
@@ -22,7 +22,7 @@ export function Benefits() {
             makes it easy to connect with people from all walks of life.{" "}
           </p>
         </div>
-        <div className="pt-4 pb-2 px-6">
+        <div className="pt-4 pb-10 border-b border-[#7a7c8670]">
         <img src={illustration2} alt="illustration" className="w-32" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
             Learn new skills and exchange ideas{" "}
@@ -36,7 +36,7 @@ export function Benefits() {
             succeed.
           </p>
         </div>
-        <div className="pt-4 pb-2 px-6">
+        <div className="pt-4 pb-10 border-b border-[#7a7c8670]">
         <img src={illustration3} alt="illustration" className="w-32 h-32 object-contain object-center" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
             Build a network{" "}
@@ -48,7 +48,7 @@ export function Benefits() {
             you need to achieve your goals!
           </p>
         </div>
-        <div className="pt-4 pb-2 px-6">
+        <div className="pt-4 pb-0">
         <img src={illustration4} alt="illustration" className="w-32" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
             Relax, expand your horizon and have fun{" "}
