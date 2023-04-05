@@ -10,7 +10,7 @@ export function Benefits() {
         What you get
       </h2>
       <div className="grid gap-6 md:grid-cols-2 py-10 mx-6 rounded-lg">
-        <div className="pt-4 pb-10 border-b border-[#7a7c8670]">
+        <div className="pt-4 pb-10 border-b border-[#7a7c8670] md:border-0">
           <img src={illustration1} alt="illustration" className="w-32" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
             Meet new people{" "}
@@ -22,7 +22,7 @@ export function Benefits() {
             makes it easy to connect with people from all walks of life.{" "}
           </p>
         </div>
-        <div className="pt-4 pb-10 border-b border-[#7a7c8670]">
+        <div className="pt-4 pb-10 border-b border-[#7a7c8670] md:border-0">
         <img src={illustration2} alt="illustration" className="w-32" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
             Learn new skills and exchange ideas{" "}
@@ -36,7 +36,7 @@ export function Benefits() {
             succeed.
           </p>
         </div>
-        <div className="pt-4 pb-10 border-b border-[#7a7c8670]">
+        <div className="pt-4 pb-10 border-b border-[#7a7c8670] md:border-0">
         <img src={illustration3} alt="illustration" className="w-32 h-32 object-contain object-center" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
             Build a network{" "}

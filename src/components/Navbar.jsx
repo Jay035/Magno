@@ -5,7 +5,7 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center bg-[#11141d] tracking-tight w-full gap-x-12 py-6 px-8 md:px-10">
+    <nav className="absolute z-50 top-0 flex justify-between items-center bg-[#11141d] tracking-tight w-full gap-x-12 py-6 px-8 md:px-12">
       <section>
         <Link to="/">
           <h1 id="logo" className="text-2xl font-semibold w-fit">
@@ -57,6 +57,19 @@ export function Navbar() {
               className="text-[#b8b6b6] w-fit transition-colors hover:font-bold"
             >
               About us
+            </NavLink>
+          </p>
+          <p
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen((prevState) => !prevState);
+            }}
+          >
+            <NavLink
+              to="/events"
+              className="text-[#b8b6b6] w-fit transition-colors hover:font-bold"
+            >
+              Events
             </NavLink>
           </p>
           <p

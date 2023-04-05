@@ -1,7 +1,7 @@
 
 export default function Footer() {
   return (
-    <section className="py-12 px-6 text-center flex flex-col gap-6 border-t border-[#7a7c8670]">
+    <section className="py-12 px-6 text-center flex flex-col gap-8 border-t border-[#7a7c8670]">
         {/* footer logo */}
         <h1 id="logo" className="text-2xl font-semibold">Magno</h1>
 
@@ -16,7 +16,7 @@ export default function Footer() {
 
         {/* (Facebook, Instagram and Twitter logos)  */}
 
-        <p className="font-semibold">©2023 Magno. All rights reserved </p>
+        <p className="font-medium">©2023 Magno. All rights reserved </p>
     </section>
   )
 }

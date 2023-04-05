@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { Activities } from "../components/Activities";
+import { Activities } from "./Activities";
 import { Benefits } from "../components/Benefits";
 import Footer from "../components/Footer";
 import { HeroSection } from "../components/HeroSection";
 import { HowItWorks } from "../components/HowItWorks";
 import { Testimonials } from "../components/Testimonials";
+import GetInvolved from "../components/GetInvolved";
 
 export default function Home() {
   return (
@@ -25,25 +26,21 @@ export default function Home() {
 
       <div className="">
         {/* Our events & activities */}
-        <Activities />
+        <div className="text-center px-6 py-6 max-w-3xl mx-auto">
+          <h2 className="text-2xl capitalize mb-6 font-medium">
+            Our events & activities{" "}
+          </h2>
+          <Link to="/events" className="bg-[#ef5b44] py-2 px-4 rounded-lg">
+            Explore our events and activities
+          </Link>
+        </div>
+        {/* <Activities /> */}
 
         {/* How it works */}
         <HowItWorks />
       </div>
       {/* Get Involved */}
-      <div className="pb-12 pt-6 px-6 text-center">
-        <h2 className="text-center text-2xl capitalize mb-6 font-medium">
-          Get Involved
-        </h2>
-        <p className="text-base text-[#7a7c86] mb-6">
-          We look to have people who share in our passion for exploring new
-          interests, having fun and building connections. Get access to our
-          events and activities as well as exclusive perks.
-        </p>
-        <Link to="/register" className="text-white px-6 bg-[#ef5b44] py-[8px] rounded-2xl mt-4 hover:bg-[#ef5b44]/75">
-          Register now
-        </Link>
-      </div>
+      <GetInvolved />
 
       {/* Testimonials */}
       <Testimonials />

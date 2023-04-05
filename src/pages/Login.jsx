@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import googleIcon from '../assets/google-icon.png';
 
 export default function Login() {
   return (
@@ -10,7 +11,7 @@ export default function Login() {
 
       <div className="">
         <div className="text-red-500 font-medium">
-          error !{/* {{ store.error }} */}
+          {/* {{ store.error }} */}
         </div>
 
         <form className="flex flex-col gap-5">
@@ -24,7 +25,7 @@ export default function Login() {
               type="email"
               className="border outline-none text-white bg-white/10 border-[#7a7c86] rounded-lg px-2 py-1"
               name="email"
-              value
+              // value
               required
             />
           </div>
@@ -55,7 +56,7 @@ export default function Login() {
           <p className="opacity-90 text-center font-normal">Or</p>
 
           <button className="w-full flex justify-center items-center gap-4 border border-gray-500 py-2 font-medium rounded-lg hover:border-2">
-            <img src="" className="w-6 h-6" alt="" />
+            <img src={googleIcon} className="w-6 h-6" alt="google icon" />
             Login with Google
           </button>
         </form>

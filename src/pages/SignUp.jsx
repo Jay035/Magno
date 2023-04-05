@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import googleIcon from '../assets/google-icon.png';
 
 export default function SignUp() {
   return (
@@ -47,7 +48,7 @@ export default function SignUp() {
         <p className="opacity-90 text-center font-medium">Or</p>
 
         <button className="flex justify-center items-center gap-4 border border-gray-500 py-2 font-medium rounded-lg hover:border-2">
-          <img src="" className="w-6 h-6" alt="" />
+          <img src={googleIcon} className="w-6 h-6" alt="google icon" />
           Sign Up With Google
         </button>
       </form>
