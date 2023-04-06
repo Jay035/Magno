@@ -1,11 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { auth } from "../config/config";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="absolute z-50 top-0 flex justify-between items-center bg-[#11141d] tracking-tight w-full gap-x-12 py-6 px-8 md:px-12">
+    <nav className="absolute z-[99999] top-0 flex justify-between items-center bg-[#11141d] tracking-tight w-full gap-x-12 py-6 px-8 md:px-12">
       <section>
         <Link to="/">
           <h1 id="logo" className="text-2xl font-semibold w-fit">
@@ -99,69 +100,98 @@ export function Navbar() {
             </NavLink>
           </p>
         </div>
+
         {/* CTA buttons */}
         <div className="flex flex-col items-center mt-6 gap-8 lg:hidden">
-          <p
-            onClick={(e) => {
-              e.preventDefault();
-              setMenuOpen((prevState) => !prevState);
-            }}
-          >
-            <NavLink
-              to="/login"
-              activestyle={{ color: "#ffffff" }}
-              className="border border-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#ef5b44]/75"
-            >
-              Login
-            </NavLink>
-          </p>
-          <p
-            onClick={(e) => {
-              e.preventDefault();
-              setMenuOpen((prevState) => !prevState);
-            }}
-          >
-            <NavLink
-              to="/register"
-              activestyle={{ color: "#ffffff" }}
-              className="  bg-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#ef5b44]/75"
-            >
-              Sign up
-            </NavLink>
-          </p>
+          {auth.currentUser && (
+            <div className="flex items-center gap-4">
+              <p className="text-white">
+                {auth.currentUser.displayName || auth.currentUser.email}
+              </p>
+              <p className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-[#ef5b44]/75">
+                SIGN OUT
+              </p>
+            </div>
+          )}
+          {!auth.currentUser && (
+            <div className="flex items-center gap-4">
+              <p
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenuOpen((prevState) => !prevState);
+                }}
+              >
+                <NavLink
+                  to="/login"
+                  activestyle={{ color: "#ffffff" }}
+                  className="border border-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#ef5b44]/75"
+                >
+                  Login
+                </NavLink>
+              </p>
+              <p
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenuOpen((prevState) => !prevState);
+                }}
+              >
+                <NavLink
+                  to="/register"
+                  activestyle={{ color: "#ffffff" }}
+                  className="  bg-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#ef5b44]/75"
+                >
+                  Sign up
+                </NavLink>
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
       {/* CTA buttons */}
       <div className="gap-4 hidden lg:flex">
-        <p
-          onClick={(e) => {
-            e.preventDefault();
-            setMenuOpen((prevState) => !prevState);
-          }}
-        >
-          <NavLink
-            to="/login"
-            activestyle={{ color: "#ffffff" }}
-            className=" border border-[#ef5b44] text-white px-6 py-[10px] rounded hover:bg-[#febf4d]/75"
-          >
-            Login
-          </NavLink>
-        </p>
-        <p
-          onClick={(e) => {
-            e.preventDefault();
-            setMenuOpen((prevState) => !prevState);
-          }}
-        >
-          <NavLink
-            to="/register"
-            activestyle={{ color: "#ffffff" }}
-            className="   bg-[#ef5b44] text-white px-6 py-[10px] rounded hover:bg-[#febf4d]/75"
-          >
-            Sign up
-          </NavLink>
-        </p>
+        {auth.currentUser && (
+          <div className="flex items-center gap-4">
+            <p className="text-white">
+              {auth.currentUser.displayName || auth.currentUser.email}
+            </p>
+            <p className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-[#ef5b44]/75">
+              SIGN OUT
+            </p>
+          </div>
+        )}
+        {!auth.currentUser && (
+          <div className="flex items-center gap-4">
+            <p
+              onClick={(e) => {
+                e.preventDefault();
+                setMenuOpen((prevState) => !prevState);
+              }}
+            >
+              <NavLink
+                to="/login"
+                activestyle={{ color: "#ffffff" }}
+                className="border border-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#ef5b44]/75"
+              >
+                Login
+              </NavLink>
+            </p>
+            <p
+              onClick={(e) => {
+                e.preventDefault();
+                setMenuOpen((prevState) => !prevState);
+              }}
+            >
+              <NavLink
+                to="/register"
+                activestyle={{ color: "#ffffff" }}
+                className="  bg-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#ef5b44]/75"
+              >
+                Sign up
+              </NavLink>
+            </p>
+          </div>
+        )}
       </div>
 
       <div

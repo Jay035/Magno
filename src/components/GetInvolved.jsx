@@ -1,12 +1,11 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { settings } from "../App";
 import img1 from "../assets/paintballing.jpg";
 
-export default function GetInvolved() {
+export function GetInvolved() {
   return (
-    <section className="pb-12 pt-6 px-6 text-center flex flex-col gap-8">
+    <section className="pb-12 pt-6 px-6 md:px-32 text-center flex flex-col gap-8">
       <div className="">
         <h2 className="text-center text-2xl capitalize mb-6 font-medium">
           Get Involved

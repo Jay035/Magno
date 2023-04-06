@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import img1 from "../assets/paintballing.jpg";
 
 export default function Activities() {
-  const activities = [
+  const items = [
     {
       id: 1,
       title: "Parties",
@@ -106,10 +106,10 @@ export default function Activities() {
         Our events & activities{" "}
       </h2>
       <section className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-        {activities?.map((item) => (
-          <div key={item.id} className="relative max-w-xl">
+        {items?.map((item) => (
+          <div key={item.id} className="relative max-w-sm mx-auto">
             <img src={item.imgUrl} alt={item.title} />
-            <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
+            <div className="absolute top-0 z-10 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
               <h1 className="text-2xl">{item.title}</h1>
             </div>
           </div>

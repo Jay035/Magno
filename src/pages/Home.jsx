@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
-import { Activities } from "./Activities";
 import { Benefits } from "../components/Benefits";
 import Footer from "../components/Footer";
 import { HeroSection } from "../components/HeroSection";
 import { HowItWorks } from "../components/HowItWorks";
 import { Testimonials } from "../components/Testimonials";
-import GetInvolved from "../components/GetInvolved";
+import {GetInvolved} from "../components/GetInvolved";
 
 export default function Home() {
   return (
     <main className="home flex flex-col gap-6">
       <HeroSection />
-      <div className="text-center px-6 py-6 max-w-3xl mx-auto">
+      <div className="text-center px-6 md:px-32 py-6 md:py-12 mx-auto">
         <h2 className="text-center text-2xl capitalize mb-3 font-medium">
           Bringing people closer
         </h2>
@@ -26,7 +25,7 @@ export default function Home() {
 
       <div className="">
         {/* Our events & activities */}
-        <div className="text-center px-6 py-6 max-w-3xl mx-auto">
+        <div className="text-center px-6 md:px-32 py-12 mx-auto">
           <h2 className="text-2xl capitalize mb-6 font-medium">
             Our events & activities{" "}
           </h2>
@@ -34,7 +33,6 @@ export default function Home() {
             Explore our events and activities
           </Link>
         </div>
-        {/* <Activities /> */}
 
         {/* How it works */}
         <HowItWorks />
@@ -44,7 +42,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <Testimonials />
-      <div className="py-12 px-6 text-center">
+      <div className="py-12 px-6 md:px-32 text-center">
         <h2 className="text-center text-2xl capitalize mb-6 font-medium">
           Join Magno’s newsletter!
         </h2>
