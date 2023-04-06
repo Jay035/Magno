@@ -1,9 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { auth } from "../config/config";
+import FormValidation from "../formValidation/FormValidation";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { logOut } = FormValidation();
 
   return (
     <nav className="absolute z-[99999] top-0 flex justify-between items-center bg-[#11141d] tracking-tight w-full gap-x-12 py-6 px-8 md:px-12">
@@ -104,17 +106,23 @@ export function Navbar() {
         {/* CTA buttons */}
         <div className="flex flex-col items-center mt-6 gap-8 lg:hidden">
           {auth.currentUser && (
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col items-center gap-4">
               <p className="text-white">
                 {auth.currentUser.displayName || auth.currentUser.email}
               </p>
-              <p className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-[#ef5b44]/75">
+              <p
+                onClick={(e) => {
+                  logOut();
+                  setMenuOpen((prevState) => !prevState);
+                }}
+                className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-[#ef5b44]/75 cursor-pointer"
+              >
                 SIGN OUT
               </p>
             </div>
           )}
           {!auth.currentUser && (
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col items-center gap-4">
               <p
                 onClick={(e) => {
                   e.preventDefault();
@@ -155,7 +163,13 @@ export function Navbar() {
             <p className="text-white">
               {auth.currentUser.displayName || auth.currentUser.email}
             </p>
-            <p className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-[#ef5b44]/75">
+            <p
+              onClick={(e) => {
+                logOut();
+                setMenuOpen((prevState) => !prevState);
+              }}
+              className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-[#ef5b44]/75 cursor-pointer"
+            >
               SIGN OUT
             </p>
           </div>

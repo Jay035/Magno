@@ -2,6 +2,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
 } from "firebase/auth";
 import { auth, provider } from "../config/config";
 import { useState } from "react";
@@ -68,5 +69,10 @@ export default function FormValidation() {
     }
   };
 
-  return { email, name, password, error, loading, setName, setEmail, setError, setPassword, Register, logIn, signInWithGoogle };
+  const logOut = async () => {
+    await signOut(auth);
+    navigate("/");
+  }
+
+  return { email, name, password, error, loading, setName, setEmail, setError, setPassword, Register, logIn, signInWithGoogle, logOut };
 }

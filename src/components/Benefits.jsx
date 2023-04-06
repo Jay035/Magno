@@ -5,7 +5,7 @@ import illustration4 from "../assets/illustration-4.png";
 
 export function Benefits() {
   return (
-    <div className=" py-6 px-4 md:px-32 bg-[#1d2029]">
+    <div className=" py-6 px-6 md:px-24 lg:px-32 bg-[#1d2029]">
       <h2 className="text-center text-2xl capitalize mb-6 font-medium">
         What you get
       </h2>
@@ -23,7 +23,7 @@ export function Benefits() {
           </p>
         </div>
         <div className="pt-4 pb-10 border-b border-[#7a7c8670] md:border-0">
-        <img src={illustration2} alt="illustration" className="w-32" />
+          <img src={illustration2} alt="illustration" className="w-32" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
             Learn new skills and exchange ideas{" "}
           </h5>
@@ -37,28 +37,33 @@ export function Benefits() {
           </p>
         </div>
         <div className="pt-4 pb-10 border-b border-[#7a7c8670] md:border-0">
-        <img src={illustration3} alt="illustration" className="w-32 h-32 object-contain object-center" />
+          <img
+            src={illustration3}
+            alt="illustration"
+            className="w-32 h-32 object-contain object-center"
+          />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
             Build a network{" "}
           </h5>
           <p className="text-sm text-[#7a7c86]">
-            <span className="text-white/70 font-medium">Magno</span> is the perfect
-            place to connect with like-minded individuals and expand your
-            professional circle. Join us today and start building the network
-            you need to achieve your goals!
+            <span className="text-white/70 font-medium">Magno</span> is the
+            perfect place to connect with like-minded individuals and expand
+            your professional circle. Join us today and start building the
+            network you need to achieve your goals!
           </p>
         </div>
         <div className="pt-4 pb-0">
-        <img src={illustration4} alt="illustration" className="w-32" />
+          <img src={illustration4} alt="illustration" className="w-32" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
             Relax, expand your horizon and have fun{" "}
           </h5>
           <p className="text-sm text-[#7a7c86]">
-            <span className="text-white/70 font-medium">Magno</span> is the perfect
-            place to unwind, explore new interests, and connect with others who
-            share your passion for life. With engaging content, interactive
-            activities, and a supportive community of members, you'll be able to
-            expand your horizons and enjoy life to the fullest.
+            <span className="text-white/70 font-medium">Magno</span> is the
+            perfect place to unwind, explore new interests, and connect with
+            others who share your passion for life. With engaging content,
+            interactive activities, and a supportive community of members,
+            you'll be able to expand your horizons and enjoy life to the
+            fullest.
           </p>
         </div>
       </div>

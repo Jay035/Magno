@@ -14,7 +14,7 @@ export function Testimonials() {
   };
 
   return (
-    <div className="text-center pt-12 pb-20 px-6 md:px-32 overflow-hidden bg-[#1d2029]">
+    <div className="text-center pt-12 pb-20 px-6 md:px-24 lg:px-32 overflow-hidden bg-[#1d2029]">
       <h2 className="text-2xl capitalize mb-6 font-medium">Testimonials</h2>
       <Slider {...settings}>
         

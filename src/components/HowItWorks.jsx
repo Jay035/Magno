@@ -2,7 +2,7 @@ import formIcon from "../assets/form icon.png";
 
 export function HowItWorks() {
   return (
-    <div className="mt-4 py-6 px-6 md:px-32 bg-[#1d2029]">
+    <div className="mt-4 py-6 px-6 md:px-24 lg:px-32 bg-[#1d2029]">
       <h2 className="text-center text-2xl capitalize mb-4 font-medium">How it works</h2>
       <div className="grid gap-4 sm:grid-cols-3 items-start justify-center py-10 mx-6 rounded-lg">
         {/* card 1 */}

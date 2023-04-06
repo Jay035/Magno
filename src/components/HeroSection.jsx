@@ -14,7 +14,7 @@ export function HeroSection() {
         />
       </div>
       {/* hero container */}
-      <div className="absolute top-1/2 -translate-y-1/2 bg-[#11141d]/80 h-screen px-6 sm:px-14 md:px-24 flex flex-col justify-center items-center gap-4  w-full mx-auto">
+      <div className="absolute top-1/2 -translate-y-1/2 bg-[#11141d]/80 h-screen px-6 sm:px-14 md:px-24 flex flex-col justify-center items-center gap-4 w-full mx-auto">
         <div className="max-w-2xl mx-auto tracking-wide flex flex-col items-center gap-4">
           <h1 className="text-4xl text-white tracking-tighter">
             Experience the extraordinary{" "}
