@@ -5,7 +5,7 @@ import image3 from "../assets/image-3.jpg";
 
 export function HeroSection() {
   return (
-    <section className="relative px-6 sm:px-14 mt-10 grid md:grid-cols-2 md:items-center gap-16">
+    <section className="relative px-6 sm:px-14 xl:px-20 mt-10 grid md:grid-cols-2 md:items-center gap-16">
       {/* hero container */}
       {/* <div className="absolute top-1/2 -translate-y-1/2 bg-[#11141d]/80 h-screen px-6 sm:px-14 md:px-24 flex flex-col justify-center items-center gap-4 w-full mx-auto"> */}
       <div className="max-w-2xl mx-auto tracking-wide flex flex-col items-start gap-4 text-left">

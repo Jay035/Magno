@@ -5,7 +5,7 @@ import illustration4 from "../assets/illustration-4.png";
 
 export function Benefits() {
   return (
-    <div className=" py-6 px-6 md:px-14 bg-[#1d2029]">
+    <div className=" py-6 px-6 md:px-14 xl:px-20 bg-[#1d2029]">
       <h2 className="text-center text-2xl capitalize mb-6 font-medium">
         What you get
       </h2>

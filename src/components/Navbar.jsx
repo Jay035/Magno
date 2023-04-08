@@ -8,7 +8,7 @@ export function Navbar() {
   const { logOut } = FormValidation();
 
   return (
-    <nav className=" flex justify-between items-center bg-[#11141d] tracking-tight w-full gap-x-12 py-6 px-8 md:px-12">
+    <nav className=" flex justify-between items-center bg-[#11141d] tracking-tight w-full gap-x-12 py-6 px-8 sm:px-14 xl:px-20">
       <section>
         <Link to="/">
           <h1 id="logo" className="text-2xl font-semibold w-fit">
@@ -20,7 +20,7 @@ export function Navbar() {
         className={`${
           menuOpen
             ? `left-0 px-8 pt-8 gap-6 z-40 ease-out lg:pt-0`
-            : `-left-full opacity-0 lg:left-0`
+            : `-left-full opacity-0 lg:opacity-100 lg:left-0`
         } absolute top-0 bg-[#11141d] transition-all duration-100 lg:bg-transparent lg:relative h-screen lg:h-fit w-full lg:w-fit ease-in-out flex flex-col lg:flex-row lg:gap-12 lg:justify-between lg:items-center text-base md:text-lg`}
       >
         {/* close button */}

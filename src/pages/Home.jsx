@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="home flex flex-col gap-6">
       <HeroSection />
-      <section className="text-center md:text-left px-6 sm:px-14 py-6 md:py-12 mx-auto grid md:grid-cols-2 gap-6 lg:gap-16">
+      <section className="text-center md:text-left px-6 sm:px-14 xl:px-20 py-6 md:py-12 mx-auto grid md:grid-cols-2 gap-6 lg:gap-16">
         <div className="md:order-2">
           <h2 className="text-2xl capitalize mb-3 font-medium">
             Bringing people closer
@@ -33,7 +33,7 @@ export default function Home() {
 
       <div className="">
         {/* Our events & activities */}
-        <div className="text-center px-6 md:px-24 lg:px-32 py-12 mx-auto">
+        <div className="text-center px-6 md:px-24 xl:px-20 py-12 mx-auto">
           <h2 className="text-2xl capitalize mb-6 font-medium">
             Explore Our activities{" "}
           </h2>
@@ -50,7 +50,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <Testimonials />
-      <div className="py-12 px-6 md:px-24 lg:px-32 text-center">
+      <div className="py-12 px-6 md:px-14 xl:px-20 text-center">
         <h2 className="text-center text-2xl capitalize mb-6 font-medium">
           Join Magno’s newsletter!
         </h2>
