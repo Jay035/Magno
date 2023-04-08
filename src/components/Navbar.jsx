@@ -19,9 +19,9 @@ export function Navbar() {
       <section
         className={`${
           menuOpen
-            ? `left-0 px-8 pt-8 gap-6 z-40 ease-out duration-100 lg:pt-0`
-            : `-left-full lg:left-0`
-        } absolute top-0 bg-[#11141d] transition-all lg:bg-transparent lg:relative h-screen lg:h-fit w-full lg:w-fit ease-in-out flex flex-col lg:flex-row lg:gap-12 lg:justify-between lg:items-center text-base md:text-lg`}
+            ? `left-0 px-8 pt-8 gap-6 z-40 ease-out lg:pt-0`
+            : `-left-full opacity-0 lg:left-0`
+        } absolute top-0 bg-[#11141d] transition-all duration-100 lg:bg-transparent lg:relative h-screen lg:h-fit w-full lg:w-fit ease-in-out flex flex-col lg:flex-row lg:gap-12 lg:justify-between lg:items-center text-base md:text-lg`}
       >
         {/* close button */}
         <div
@@ -129,7 +129,7 @@ export function Navbar() {
             </div>
           )}
           {!auth.currentUser && (
-            <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col items-center gap-8">
               <p
                 onClick={(e) => {
                   e.preventDefault();

@@ -4,7 +4,7 @@ export function HowItWorks() {
   return (
     <div className="mt-4 py-6 px-6 md:px-14 bg-[#1d2029]">
       <h2 className="text-center text-2xl capitalize mb-4 font-medium">How it works</h2>
-      <div className="grid gap-4 sm:grid-cols-3 items-start justify-center py-10 mx-6 rounded-lg">
+      <div className="grid gap-4 lg:gap-16 sm:grid-cols-3 items-start justify-center py-10 mx-6 rounded-lg">
         {/* card 1 */}
         <div className="py-2 text-center">
           <div className="bg-[#262932] flex justify-center items-center mb-4 py-4 max-w-[200px] mx-auto">
@@ -21,7 +21,7 @@ export function HowItWorks() {
           </div>
           {/* <span>Step Two</span> */}
           <h2 className="text-white">Explore</h2>
-          <p className="text-white/80 text-xs">2.	Explore events and get a ticket</p>
+          <p className="text-white/80 text-xs">Explore events and get a ticket</p>
         </div>
         {/* card 3 */}
         <div className=" py-2 text-center">
@@ -30,7 +30,7 @@ export function HowItWorks() {
           </div>
           {/* <span>Step Three</span> */}
           <h2 className="text-white"> Access our events and activities</h2>
-          <p className="text-white/80 text-xs">3.	Enjoy access to curated social activities and unlimited fun.</p>
+          <p className="text-white/80 text-xs">Enjoy access to curated social activities and unlimited fun.</p>
         </div>
       </div>
     </div>

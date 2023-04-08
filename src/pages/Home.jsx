@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="home flex flex-col gap-6">
       <HeroSection />
-      <section className="text-center md:text-left px-6 sm:px-14 lg:px-0 py-6 md:py-12 mx-auto grid md:grid-cols-2 gap-6">
+      <section className="text-center md:text-left px-6 sm:px-14 py-6 md:py-12 mx-auto grid md:grid-cols-2 gap-6 lg:gap-16">
         <div className="md:order-2">
           <h2 className="text-2xl capitalize mb-3 font-medium">
             Bringing people closer
@@ -58,7 +58,7 @@ export default function Home() {
           Get news and updates delivered to your mailbox.
         </p>
         <input
-          type="text"
+          type="email"
           name=""
           id=""
           placeholder="Your email address"

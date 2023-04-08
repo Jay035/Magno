@@ -18,55 +18,55 @@ export function GetInvolved() {
         </p>
         <Link
           to="/register"
-          className="text-white px-6 bg-[#ef5b44] py-[8px] rounded-2xl mt-4 hover:bg-[#ef5b44]/75"
+          className="text-white px-6 bg-[#ef5b44] py-[8px] rounded-lg mt-4 hover:bg-[#ef5b44]/75"
         >
           Register now
         </Link>
       </div>
       <Slider {...settings}>
-        <div className="relative max-w-lg">
+        <div className="relative max-w-sm">
           <img className="" src={img1} alt="img" />
           <h1 className="text-2xl mt-4">Parties</h1>
           {/* <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white"> */}
           {/* </div> */}
         </div>
-        <div className="relative max-w-lg">
+        <div className="relative max-w-sm">
           <img className="" src={img1} alt="img" />
           {/* <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white"> */}
           <h1 className="text-2xl mt-4">Hangouts</h1>
           {/* </div> */}
         </div>
-        <div className="relative max-w-lg">
+        <div className="relative max-w-sm">
           <img className="" src={img1} alt="img" />
           {/* <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white"> */}
           <h1 className="text-2xl mt-4">Movie dates</h1>
           {/* </div> */}
         </div>
-        <div className="relative max-w-lg">
+        <div className="relative max-w-sm">
           <img className="" src={img1} alt="img" />
           {/* <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white"> */}
           <h1 className="text-2xl mt-4">Concerts</h1>
           {/* </div> */}
         </div>
-        <div className="relative max-w-lg">
+        <div className="relative max-w-sm">
           <img className="" src={img1} alt="img" />
           {/* <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white"> */}
           <h1 className="text-2xl mt-4">Video games</h1>
           {/* </div> */}
         </div>
-        <div className="relative max-w-lg">
+        <div className="relative max-w-sm">
           <img className="" src={img1} alt="img" />
           {/* <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white"> */}
           <h1 className="text- mt-4">Board games </h1>
           {/* </div> */}
         </div>
-        <div className="relative max-w-lg">
+        <div className="relative max-w-sm">
           <img className="" src={img1} alt="img" />
           {/* <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white"> */}
-          <h1 className="text-2xl mt-4">Painting </h1>
+          <h1 className="text-2xl mt-4">Painting</h1>
           {/* </div> */}
         </div>
-        <div className="relative max-w-lg">
+        <div className="relative max-w-sm">
           <img className="" src={img1} alt="img" />
           {/* <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white"> */}
           <h1 className="text-2xl mt-4">Excursions</h1>

@@ -5,11 +5,11 @@ import illustration4 from "../assets/illustration-4.png";
 
 export function Benefits() {
   return (
-    <div className=" py-6 px-6 md:px-14 lg:px-0 bg-[#1d2029]">
+    <div className=" py-6 px-6 md:px-14 bg-[#1d2029]">
       <h2 className="text-center text-2xl capitalize mb-6 font-medium">
         What you get
       </h2>
-      <div className="grid gap-6 md:grid-cols-2 py-10 mx-6 rounded-lg">
+      <div className="grid gap-6 lg:gap-16 md:grid-cols-2 py-10 mx-6 rounded-lg">
         <div className="pt-4 pb-10 border-b border-[#7a7c8670] md:border-0">
           <img src={illustration1} alt="illustration" className="w-32" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
