@@ -101,9 +101,9 @@ export default function Activities() {
   ];
 
   return (
-    <div className="text-center pt-28 pb-20 px-6 md:px-12 overflow-hidden">
+    <div className="text-center mt-10 pb-20 px-6 md:px-12 overflow-hidden">
       <h2 className="text-2xl capitalize mb-8 font-medium">
-        Our events & activities{" "}
+        Our activities{" "}
       </h2>
       <section className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {items?.map((item) => (

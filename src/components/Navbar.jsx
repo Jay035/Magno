@@ -107,9 +107,16 @@ export function Navbar() {
         <div className="flex flex-col items-center mt-6 gap-8 lg:hidden">
           {auth.currentUser && (
             <div className="flex flex-col items-center gap-4">
-              <p className="text-white">
-                {auth.currentUser.displayName || auth.currentUser.email}
-              </p>
+              <div className="flex items-center gap-4">
+                <img
+                  className="w-10 h-10 rounded-full"
+                  src={auth?.currentUser?.photoURL}
+                  alt="profile pic"
+                />
+                <p className="text-white">
+                  {auth.currentUser.displayName || auth.currentUser.email}
+                </p>
+              </div>
               <p
                 onClick={(e) => {
                   logOut();
@@ -160,9 +167,16 @@ export function Navbar() {
       <div className="gap-4 hidden lg:flex">
         {auth.currentUser && (
           <div className="flex items-center gap-4">
-            <p className="text-white">
-              {auth.currentUser.displayName || auth.currentUser.email}
-            </p>
+            <div className="flex items-center gap-4">
+              <img
+                className="w-10 h-10 rounded-full"
+                src={auth?.currentUser?.photoURL}
+                alt="profile pic"
+              />
+              <p className="text-white">
+                {auth?.currentUser?.displayName || auth?.currentUser?.email}
+              </p>
+            </div>
             <p
               onClick={(e) => {
                 logOut();

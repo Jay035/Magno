@@ -25,7 +25,7 @@ export default function FormValidation() {
       // setLoading(false);
       navigate("/");
     } catch (err) {
-      console.log(err.message)
+      console.log(err.message);
       setError(err.message);
       setLoading(false);
     }
@@ -62,6 +62,9 @@ export default function FormValidation() {
         case "auth/wrong-password":
           setError("Incorrect password");
           break;
+        case "auth/popup-closed-by-user":
+          setError("Popup closed-by-user");
+          break;
         default:
           setError("Incorrect email or password");
           break;
@@ -72,7 +75,21 @@ export default function FormValidation() {
   const logOut = async () => {
     await signOut(auth);
     navigate("/");
-  }
+  };
 
-  return { email, name, password, error, loading, setName, setEmail, setError, setPassword, Register, logIn, signInWithGoogle, logOut };
+  return {
+    email,
+    name,
+    password,
+    error,
+    loading,
+    setName,
+    setEmail,
+    setError,
+    setPassword,
+    Register,
+    logIn,
+    signInWithGoogle,
+    logOut,
+  };
 }
