@@ -4,21 +4,29 @@ import Footer from "../components/Footer";
 import { HeroSection } from "../components/HeroSection";
 import { HowItWorks } from "../components/HowItWorks";
 import { Testimonials } from "../components/Testimonials";
-import {GetInvolved} from "../components/GetInvolved";
+import { GetInvolved } from "../components/GetInvolved";
+import image3 from "../assets/image-3.jpg";
 
 export default function Home() {
   return (
     <main className="home flex flex-col gap-6">
       <HeroSection />
-      <div className="text-center px-6 md:px-24 lg:px-32 py-6 md:py-12 mx-auto">
-        <h2 className="text-center text-2xl capitalize mb-3 font-medium">
-          Bringing people closer
-        </h2>
-        <p className="text-[#7a7c86]">
-          We host a wide variety of events and activities throughout the year.
-          Get to meet people and build connections through our social events.
-        </p>
-      </div>
+      <section className="text-center md:text-left px-6 sm:px-14 lg:px-0 py-6 md:py-12 mx-auto grid md:grid-cols-2 gap-6">
+        <div className="md:order-2">
+          <h2 className="text-2xl capitalize mb-3 font-medium">
+            Bringing people closer
+          </h2>
+          <p className="text-[#7a7c86]">
+            We curate a number of events and activities for discerning
+            individuals who enjoy getting together to explore new interests and
+            hobbies that helps them relax. Our events and activities are
+            exclusive, interactive, informative and fun.
+          </p>
+        </div>
+        <div className="">
+          <img src={image3} alt="" />
+        </div>
+      </section>
 
       {/* What you get */}
       <Benefits />
@@ -27,7 +35,7 @@ export default function Home() {
         {/* Our events & activities */}
         <div className="text-center px-6 md:px-24 lg:px-32 py-12 mx-auto">
           <h2 className="text-2xl capitalize mb-6 font-medium">
-            Our events & activities{" "}
+            Explore Our activities{" "}
           </h2>
           <Link to="/events" className="bg-[#ef5b44] py-2 px-4 rounded-lg">
             Explore our events and activities

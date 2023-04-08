@@ -5,7 +5,7 @@ import illustration4 from "../assets/illustration-4.png";
 
 export function Benefits() {
   return (
-    <div className=" py-6 px-6 md:px-24 lg:px-32 bg-[#1d2029]">
+    <div className=" py-6 px-6 md:px-14 lg:px-0 bg-[#1d2029]">
       <h2 className="text-center text-2xl capitalize mb-6 font-medium">
         What you get
       </h2>
@@ -55,7 +55,7 @@ export function Benefits() {
         <div className="pt-4 pb-0">
           <img src={illustration4} alt="illustration" className="w-32" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
-            Relax, expand your horizon and have fun{" "}
+            Relax and have lots of fun{" "}
           </h5>
           <p className="text-sm text-[#7a7c86]">
             <span className="text-white/70 font-medium">Magno</span> is the

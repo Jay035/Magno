@@ -21,7 +21,7 @@ export function HowItWorks() {
           </div>
           {/* <span>Step Two</span> */}
           <h2 className="text-white">Explore</h2>
-          <p className="text-white/80 text-xs">Explore upcoming events and get a ticket  </p>
+          <p className="text-white/80 text-xs">2.	Explore events and get a ticket</p>
         </div>
         {/* card 3 */}
         <div className=" py-2 text-center">
@@ -30,7 +30,7 @@ export function HowItWorks() {
           </div>
           {/* <span>Step Three</span> */}
           <h2 className="text-white"> Access our events and activities</h2>
-          <p className="text-white/80 text-xs">Enjoy access to curated activities and unlimited fun.</p>
+          <p className="text-white/80 text-xs">3.	Enjoy access to curated social activities and unlimited fun.</p>
         </div>
       </div>
     </div>

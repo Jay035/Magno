@@ -8,7 +8,7 @@ export function Navbar() {
   const { logOut } = FormValidation();
 
   return (
-    <nav className="absolute z-[99999] top-0 flex justify-between items-center bg-[#11141d] tracking-tight w-full gap-x-12 py-6 px-8 md:px-12">
+    <nav className=" flex justify-between items-center bg-[#11141d] tracking-tight w-full gap-x-12 py-6 px-8 md:px-12">
       <section>
         <Link to="/">
           <h1 id="logo" className="text-2xl font-semibold w-fit">
@@ -115,7 +115,7 @@ export function Navbar() {
                   logOut();
                   setMenuOpen((prevState) => !prevState);
                 }}
-                className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-[#ef5b44]/75 cursor-pointer"
+                className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-transparent cursor-pointer"
               >
                 SIGN OUT
               </p>
@@ -146,7 +146,7 @@ export function Navbar() {
                 <NavLink
                   to="/register"
                   activestyle={{ color: "#ffffff" }}
-                  className="  bg-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#ef5b44]/75"
+                  className="border border-[#ef5b44] bg-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-transparent"
                 >
                   Sign up
                 </NavLink>
@@ -168,7 +168,7 @@ export function Navbar() {
                 logOut();
                 setMenuOpen((prevState) => !prevState);
               }}
-              className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-[#ef5b44]/75 cursor-pointer"
+              className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-transparent cursor-pointer"
             >
               SIGN OUT
             </p>
@@ -199,7 +199,7 @@ export function Navbar() {
               <NavLink
                 to="/register"
                 activestyle={{ color: "#ffffff" }}
-                className="  bg-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#ef5b44]/75"
+                className="border border-[#ef5b44] bg-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-transparent"
               >
                 Sign up
               </NavLink>
