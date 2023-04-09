@@ -14,7 +14,7 @@ const Activities = lazy(() => import("./pages/Activities"));
 
 function App() {
   return (
-    <div className="App bg-[#11141d] text-white/90 h-full">
+    <div className="App bg-[#06070B] text-white/90 h-full">
       <Router>
         <Suspense fallback={<Loader />}>
         <Navbar />

@@ -1,27 +1,74 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@0;1&family=Open+Sans:wght@300;400;500&family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Helvetica Neue Bold";
+  src: url("/fonts/neue-helvetica-cufonfonts/Helvetica\ Neue\ LT\ 75\ Bold.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue Medium";
+  src: url("../public/fonts/neue-helvetica-cufonfonts/Helvetica\ Neue\ LT\ 65\ Medium.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Regular";
+  src: url("../public/fonts/neue-helvetica-cufonfonts//Helvetica\ Neue\ LT\ 55\ Roman.ttf");
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../public/fonts/NeueHaasDisplayRoman.ttf");
+}
+
 /* @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css'; */
 
 body {
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  overflow-y: scroll;
 }
+
+/* .font-Helvetica-Neue-Regular {
+  font-family: "Helvetica Neue Regular";
+}
+
+.font-Helvetica-Neue-Medium {
+  font-family: "Helvetica Neue Medium";
+}
+
+.font-Helvetica-Neue-Bold {
+  font-family: "Helvetica Neue Bold";
+} */
 
 nav #logo {
   font-family: "Lobster ", cursive;
 }
 
-#loader,
+h1,
+h2 {
+  font-family: "Anton", sans-serif;
+}
+
+.hero-container {
+  background: linear-gradient(180deg, #0f1118 51.41%, rgba(17, 20, 29, 0) 100%);
+  /* mix-blend-mode: multiply; */
+  opacity: 0.7;
+}
+/* #loader,
 h1,
 .home h2,
 button,
 .Raleway {
-  font-family: "Raleway", sans-serif;
-}
+   font-family: "Raleway", sans-serif; 
+  font-family: "Helvetica Neue";
+} */
 
 .slick-track {
   /* width: 100% !important; */

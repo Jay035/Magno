@@ -5,24 +5,38 @@ import illustration4 from "../assets/illustration-4.png";
 
 export function Benefits() {
   return (
-    <div className=" py-6 px-6 md:px-14 xl:px-20 bg-[#1d2029]">
-      <h2 className="text-center text-2xl capitalize mb-6 font-medium">
-        What you get
+    <div className=" pt-6 px-6 md:px-14 xl:px-20 ">
+      <h2 className="text-center leading-[100px] md:leading-[120px] text-2xl md:text-3xl text-[#EAECF0] capitalize">
+        What you get <span className="p-[2px] text-[1px] ml-[4px] mb-[1px] bg-[#EF5B44]"></span>
       </h2>
-      <div className="grid gap-6 lg:gap-16 md:grid-cols-2 py-10 mx-6 rounded-lg">
-        <div className="pt-4 pb-10 border-b border-[#7a7c8670] md:border-0">
-          <img src={illustration1} alt="illustration" className="w-32" />
-          <h5 className="text-lg text-white my-1 Raleway font-medium">
+      <div className="grid gap-4 text-center text-white">
+        <div className=" border-t border-[#475467] md:border-0">
+          <h5 className="text-[28px] lg:text-[52px] leading-[90px] md:leading-[120px]">
             Meet new people{" "}
           </h5>
-          <p className="text-sm text-[#7a7c86]">
-            Whether you're looking to expand your social circle, network with
+        </div>
+        <div className=" border-t border-[#475467] md:border-0">
+          <h5 className="text-[28px] lg:text-[52px] py-7 leading-[40px] md:py-0 md:leading-[120px]">
+          Learn new skills and exchange ideas{" "}
+          </h5>
+        </div>
+        <div className=" border-t border-[#475467] md:border-0">
+          <h5 className="text-[28px] lg:text-[52px] leading-[90px] md:leading-[120px]">
+          Build a network{" "}
+          </h5>
+        </div>
+        <div className=" border-y border-[#475467] md:border-0">
+          <h5 className="text-[28px] lg:text-[52px] leading-[90px] md:leading-[120px]">
+          Relax and have lots of fun{" "}
+          </h5>
+        </div>
+          {/* <p className="text-sm text-[#7a7c86]">
+            Whether you're cd desktoplooking to expand your social circle, network with
             like-minded professionals, or simply make new friends,{" "}
             <span className="text-white/70 font-medium">Magno </span>
             makes it easy to connect with people from all walks of life.{" "}
-          </p>
-        </div>
-        <div className="pt-4 pb-10 border-b border-[#7a7c8670] md:border-0">
+          </p> */}
+        {/* <div className="pt-4 pb-10 border-b border-[#7a7c8670] md:border-0">
           <img src={illustration2} alt="illustration" className="w-32" />
           <h5 className="text-lg text-white my-1 Raleway font-medium">
             Learn new skills and exchange ideas{" "}
@@ -65,7 +79,7 @@ export function Benefits() {
             you'll be able to expand your horizons and enjoy life to the
             fullest.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

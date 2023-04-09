@@ -8,13 +8,13 @@ export function Navbar() {
   const { logOut } = FormValidation();
 
   return (
-    <nav className=" flex justify-between items-center bg-[#11141d] tracking-tight w-full gap-x-12 py-6 px-8 sm:px-14 xl:px-20">
+    <nav className=" flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-6 px-8 sm:px-14 xl:px-20">
       <section>
-        <Link to="/">
+        {/* <Link to="/">
           <h1 id="logo" className="text-2xl font-semibold w-fit">
             Magno
           </h1>
-        </Link>
+        </Link> */}
       </section>
       <section
         className={`${

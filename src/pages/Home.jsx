@@ -11,40 +11,36 @@ export default function Home() {
   return (
     <main className="home flex flex-col gap-6">
       <HeroSection />
-      <section className="text-center md:text-left px-6 sm:px-14 xl:px-20 py-6 md:py-12 mx-auto grid md:grid-cols-2 gap-6 lg:gap-16">
-        <div className="md:order-2">
-          <h2 className="text-2xl capitalize mb-3 font-medium">
-            Bringing people closer
+      <section className="text-center px-6 sm:px-14 py-6 md:py-12 mx-auto grid md:grid-cols-2 gap-6 lg:gap-16">
+        <div className="">
+          <h2 className="text-3xl lg:text-[64px] text-[#EAECF0] capitalize mb-2">
+            Bringing people closer <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
           </h2>
-          <p className="text-[#7a7c86]">
+          <p className="text-[#D0D5DD] text-lg lg:text-2xl mb-8">
             We curate a number of events and activities for discerning
             individuals who enjoy getting together to explore new interests and
             hobbies that helps them relax. Our events and activities are
             exclusive, interactive, informative and fun.
           </p>
         </div>
-        <div className="">
+        {/* <div className="">
           <img src={image3} alt="" />
-        </div>
+        </div> */}
       </section>
 
       {/* What you get */}
       <Benefits />
 
-      <div className="">
         {/* Our events & activities */}
-        <div className="text-center px-6 md:px-24 xl:px-20 py-12 mx-auto">
-          <h2 className="text-2xl capitalize mb-6 font-medium">
-            Explore Our activities{" "}
-          </h2>
-          <Link to="/events" className="bg-[#ef5b44] py-2 px-4 rounded-lg">
-            Explore our events and activities
+        {/* <div className="px-6 md:px-24 mb-28 "> */}
+          
+          <Link to="/events" className="mb-28 mt-16 border text-center w-fit mx-auto border-[#EAECF0] py-2 rounded-[50px] px-8 md:px-[55px] text-[#EAECF0] text-base sm:text-xl md:text-2xl">
+          EXPLORE OUR EVENTS AND ACTIVITIES
           </Link>
-        </div>
+        {/* </div> */}
 
         {/* How it works */}
         <HowItWorks />
-      </div>
       {/* Get Involved */}
       <GetInvolved />
 
