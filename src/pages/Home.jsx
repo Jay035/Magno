@@ -6,6 +6,7 @@ import { HowItWorks } from "../components/HowItWorks";
 import { Testimonials } from "../components/Testimonials";
 import { GetInvolved } from "../components/GetInvolved";
 import image3 from "../assets/image-3.jpg";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
@@ -50,7 +51,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <Testimonials />
-      <div className="py-28 px-6 md:px-14 xl:px-[130px] text-center">
+      <div className="pt-28 px-6 md:px-14 xl:px-[130px] text-center">
         <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
           Join Magno’s newsletter!
         </h2>
@@ -66,6 +67,7 @@ export default function Home() {
         />
         <button className="px-[62.5px] block w-fit mx-auto bg-[#EF5B44] rounded-[30px] py-3 mt-8 border border-[#EF5B44] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)]">Subscribe</button>
       </div>
+      <Contact />
       <Footer />
     </main>
   );

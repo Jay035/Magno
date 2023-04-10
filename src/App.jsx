@@ -8,9 +8,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Loader from "./components/Loader";
 
 const Home = lazy(() => import("./pages/Home"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
 const Login = lazy(() => import("./pages/Login"));
 const SignUp = lazy(() => import("./pages/SignUp"));
-const Activities = lazy(() => import("./pages/Activities"));
+const Events = lazy(() => import("./pages/Events"));
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route path="/events" element={<Activities />} />
+            <Route path="/aboutUs" element={<AboutUs />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<SignUp />} />
           </Routes>

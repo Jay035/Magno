@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import img1 from "../assets/paintballing.jpg";
 
-export default function Activities() {
+export default function Events() {
   const items = [
     {
       id: 1,

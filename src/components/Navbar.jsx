@@ -96,7 +96,7 @@ export function Navbar() {
             }}
           >
             <NavLink
-              to="/contact"
+              to="/#contact"
               className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               Contact
