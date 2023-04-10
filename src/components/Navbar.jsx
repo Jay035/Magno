@@ -32,8 +32,9 @@ export function Navbar() {
             setMenuOpen((prevState) => !prevState);
           }}
         >
-          <span className="w-7 h-[3px] bg-white block rotate-[45deg] translate-y-2"></span>
-          <span className="w-7 h-[3px] bg-white block rotate-[495deg] translate-y-1"></span>
+          <p className="sr-only">Close</p>
+          <span className="w-7 h-[3px] bg-[#EAECF0] block rotate-[45deg] translate-y-2"></span>
+          <span className="w-7 h-[3px] bg-[#EAECF0] block rotate-[495deg] translate-y-1"></span>
         </div>
         <div className="flex flex-col items-center gap-6 mt-40 lg:mt-0 lg:flex-row">
           <p
@@ -44,7 +45,7 @@ export function Navbar() {
           >
             <NavLink
               to="/"
-              className="text-[#b8b6b6] w-fit transition-colors hover:font-bold"
+              className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               Home
             </NavLink>
@@ -57,7 +58,7 @@ export function Navbar() {
           >
             <NavLink
               to="/aboutUs"
-              className="text-[#b8b6b6] w-fit transition-colors hover:font-bold"
+              className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               About us
             </NavLink>
@@ -70,7 +71,7 @@ export function Navbar() {
           >
             <NavLink
               to="/events"
-              className="text-[#b8b6b6] w-fit transition-colors hover:font-bold"
+              className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               Events
             </NavLink>
@@ -83,7 +84,7 @@ export function Navbar() {
           >
             <NavLink
               to="/aboutUs"
-              className="text-[#b8b6b6] w-fit transition-colors hover:font-bold"
+              className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               Blog
             </NavLink>
@@ -95,8 +96,8 @@ export function Navbar() {
             }}
           >
             <NavLink
-              to="/aboutUs"
-              className="text-[#b8b6b6] w-fit transition-colors hover:font-bold"
+              to="/contact"
+              className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               Contact
             </NavLink>
@@ -107,14 +108,14 @@ export function Navbar() {
         <div className="flex flex-col items-center mt-6 gap-8 lg:hidden">
           {auth.currentUser && (
             <div className="flex flex-col items-center gap-4">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 px-[18px] py-[10px] rounded-[50px] border border-[#EAECF0]">
                 <img
-                  className="w-10 h-10 rounded-full"
+                  className="w-7 h-7 rounded-full"
                   src={auth?.currentUser?.photoURL}
                   alt="profile pic"
                 />
-                <p className="text-white">
-                  {auth.currentUser.displayName || auth.currentUser.email}
+                <p className="text-[#EAECF0]">
+                  {auth?.currentUser?.displayName || auth?.currentUser?.email}
                 </p>
               </div>
               <p
@@ -122,7 +123,7 @@ export function Navbar() {
                   logOut();
                   setMenuOpen((prevState) => !prevState);
                 }}
-                className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-transparent cursor-pointer"
+                className="bg-[#EF5B44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent cursor-pointer"
               >
                 SIGN OUT
               </p>
@@ -138,10 +139,9 @@ export function Navbar() {
               >
                 <NavLink
                   to="/login"
-                  activestyle={{ color: "#ffffff" }}
-                  className="border border-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#ef5b44]/75"
+                  className="border border-[#EAECF0] text-center text-[#EAECF0] px-[18px] py-[10px] rounded-[50px] hover:border-[#ef5b44]"
                 >
-                  Login
+                  CONTACT US
                 </NavLink>
               </p>
               <p
@@ -151,11 +151,10 @@ export function Navbar() {
                 }}
               >
                 <NavLink
-                  to="/register"
-                  activestyle={{ color: "#ffffff" }}
-                  className="border border-[#ef5b44] bg-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-transparent"
+                  to="/login"
+                  className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent"
                 >
-                  Sign up
+                  SIGN IN
                 </NavLink>
               </p>
             </div>
@@ -167,9 +166,9 @@ export function Navbar() {
       <div className="gap-4 hidden lg:flex">
         {auth.currentUser && (
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 px-[18px] py-[10px] border border-[#EAECF0] rounded-[50px]">
               <img
-                className="w-10 h-10 rounded-full"
+                className="w-7 h-7 rounded-full"
                 src={auth?.currentUser?.photoURL}
                 alt="profile pic"
               />
@@ -182,7 +181,7 @@ export function Navbar() {
                 logOut();
                 setMenuOpen((prevState) => !prevState);
               }}
-              className="bg-[#ef5b44] w-28 text-center text-white px-2 py-[10px] rounded hover:bg-transparent cursor-pointer"
+              className="bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent cursor-pointer"
             >
               SIGN OUT
             </p>
@@ -198,10 +197,9 @@ export function Navbar() {
             >
               <NavLink
                 to="/login"
-                activestyle={{ color: "#ffffff" }}
-                className="border border-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-[#ef5b44]/75"
+                className="border border-[#EAECF0] text-center text-[#EAECF0] px-[18px] py-[10px] rounded-[50px] hover:border-[#ef5b44]"
               >
-                Login
+                CONTACT US
               </NavLink>
             </p>
             <p
@@ -211,11 +209,10 @@ export function Navbar() {
               }}
             >
               <NavLink
-                to="/register"
-                activestyle={{ color: "#ffffff" }}
-                className="border border-[#ef5b44] bg-[#ef5b44] w-28 text-center text-white px-6 py-[10px] rounded hover:bg-transparent"
+                to="/login"
+                className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent"
               >
-                Sign up
+                SIGN IN
               </NavLink>
             </p>
           </div>

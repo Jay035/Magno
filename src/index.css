@@ -33,6 +33,11 @@ body {
   /* font-family: "Open Sans", sans-serif; */
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.active{
+  color: #FFC0B6;
 }
 
 /* .font-Helvetica-Neue-Regular {

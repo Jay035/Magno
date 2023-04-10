@@ -11,10 +11,11 @@ export default function Home() {
   return (
     <main className="home flex flex-col gap-6">
       <HeroSection />
-      <section className="text-center px-6 sm:px-14 py-6 md:py-12 mx-auto grid md:grid-cols-2 gap-6 lg:gap-16">
+      <section className="text-center px-6 sm:px-14 md:px-20 xl:px-[270px] py-6 sm:py-14 mx-auto grid gap-6 lg:gap-16">
         <div className="">
-          <h2 className="text-3xl lg:text-[64px] text-[#EAECF0] capitalize mb-2">
-            Bringing people closer <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
+          <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
+            Bringing people closer{" "}
+            <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
           </h2>
           <p className="text-[#D0D5DD] text-lg lg:text-2xl mb-8">
             We curate a number of events and activities for discerning
@@ -31,26 +32,29 @@ export default function Home() {
       {/* What you get */}
       <Benefits />
 
-        {/* Our events & activities */}
-        {/* <div className="px-6 md:px-24 mb-28 "> */}
-          
-          <Link to="/events" className="mb-28 mt-16 border text-center w-fit mx-auto border-[#EAECF0] py-2 rounded-[50px] px-8 md:px-[55px] text-[#EAECF0] text-base sm:text-xl md:text-2xl">
-          EXPLORE OUR EVENTS AND ACTIVITIES
-          </Link>
-        {/* </div> */}
+      {/* Our events & activities */}
+      {/* <div className="px-6 md:px-24 mb-28 "> */}
 
-        {/* How it works */}
-        <HowItWorks />
+      <Link
+        to="/events"
+        className="mb-28 mt-16 border text-center w-fit mx-auto border-[#EAECF0] py-2 rounded-[50px] px-8 md:px-[55px] text-[#EAECF0] text-base sm:text-xl md:text-2xl"
+      >
+        EXPLORE OUR EVENTS AND ACTIVITIES
+      </Link>
+      {/* </div> */}
+
+      {/* How it works */}
+      <HowItWorks />
       {/* Get Involved */}
-      <GetInvolved />
+      {/* <GetInvolved /> */}
 
       {/* Testimonials */}
       <Testimonials />
-      <div className="py-12 px-6 md:px-14 xl:px-20 text-center">
-        <h2 className="text-center text-2xl capitalize mb-6 font-medium">
+      <div className="py-28 px-6 md:px-14 xl:px-[130px] text-center">
+        <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
           Join Magno’s newsletter!
         </h2>
-        <p className="text-sm text-[#7a7c86] mb-6">
+        <p className="text-base md:text-xl text-[#D0D5DD] mb-8">
           Get news and updates delivered to your mailbox.
         </p>
         <input
@@ -58,8 +62,9 @@ export default function Home() {
           name=""
           id=""
           placeholder="Your email address"
-          className="w-full outline-none text-white bg-white/10 border-[#7a7c86] px-3 py-3 rounded-2xl"
+          className="w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-3 rounded-lg"
         />
+        <button className="px-[62.5px] block w-fit mx-auto bg-[#EF5B44] rounded-[30px] py-3 mt-8 border border-[#EF5B44] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)]">Subscribe</button>
       </div>
       <Footer />
     </main>
