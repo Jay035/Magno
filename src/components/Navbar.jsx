@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { auth } from "../config/config";
 import FormValidation from "../formValidation/FormValidation";
+import { HashLink, NavHashLink } from "react-router-hash-link";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -95,12 +96,13 @@ export function Navbar() {
               setMenuOpen((prevState) => !prevState);
             }}
           >
-            <NavLink
+            <HashLink
+              smooth
               to="/#contact"
               className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               Contact
-            </NavLink>
+            </HashLink>
           </p>
         </div>
 
@@ -137,12 +139,13 @@ export function Navbar() {
                   setMenuOpen((prevState) => !prevState);
                 }}
               >
-                <NavLink
-                  to="/login"
+                <HashLink
+                  smooth
+                  to="/#contact"
                   className="border border-[#EAECF0] text-center text-[#EAECF0] px-[18px] py-[10px] rounded-[50px] hover:border-[#ef5b44]"
                 >
                   CONTACT US
-                </NavLink>
+                </HashLink>
               </p>
               <p
                 onClick={(e) => {
@@ -195,12 +198,13 @@ export function Navbar() {
                 setMenuOpen((prevState) => !prevState);
               }}
             >
-              <NavLink
-                to="/login"
+              <HashLink
+                smooth
+                to="/#contact"
                 className="border border-[#EAECF0] text-center text-[#EAECF0] px-[18px] py-[10px] rounded-[50px] hover:border-[#ef5b44]"
               >
                 CONTACT US
-              </NavLink>
+              </HashLink>
             </p>
             <p
               onClick={(e) => {

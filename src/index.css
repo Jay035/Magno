@@ -36,21 +36,13 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 .active{
   color: #FFC0B6;
 }
-
-/* .font-Helvetica-Neue-Regular {
-  font-family: "Helvetica Neue Regular";
-}
-
-.font-Helvetica-Neue-Medium {
-  font-family: "Helvetica Neue Medium";
-}
-
-.font-Helvetica-Neue-Bold {
-  font-family: "Helvetica Neue Bold";
-} */
 
 nav #logo {
   font-family: "Lobster ", cursive;

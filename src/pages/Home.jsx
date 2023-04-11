@@ -5,14 +5,17 @@ import { HeroSection } from "../components/HeroSection";
 import { HowItWorks } from "../components/HowItWorks";
 import { Testimonials } from "../components/Testimonials";
 import { GetInvolved } from "../components/GetInvolved";
-import image3 from "../assets/image-3.jpg";
+import asset1 from "../assets/asset-1.png";
+import asset2 from "../assets/asset-2.png";
+import asset3 from "../assets/asset-3.png";
 import Contact from "../components/Contact";
+import { Carousel } from "flowbite-react";
 
 export default function Home() {
   return (
     <main className="home flex flex-col gap-6">
       <HeroSection />
-      <section className="text-center px-6 sm:px-14 md:px-20 xl:px-[270px] py-6 sm:py-14 mx-auto grid gap-6 lg:gap-16">
+      <section className="text-center px-6 sm:px-14 md:px-20 xl:px-[270px] overflow-hidden py-6 sm:py-14 mx-auto grid gap-6 lg:gap-16">
         <div className="">
           <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
             Bringing people closer{" "}
@@ -25,9 +28,33 @@ export default function Home() {
             exclusive, interactive, informative and fun.
           </p>
         </div>
-        {/* <div className="">
-          <img src={image3} alt="" />
+        {/* <div className="overflow-x-auto scroll-smooth flex snap-x snap-mandatory w-full">
+          <div className="snap-start shrink-0 mr-6">
+            <img
+              className=" object-cover"
+              src={asset1}
+              alt="people having fun"
+            />
+          </div>
+          <div className="snap-start shrink-0 mr-6">
+            <img className="" src={asset2} alt="people having fun" />
+          </div>
+          <div className="snap-start shrink-0">
+            <img
+              className=" object-center"
+              src={asset3}
+              alt="people having fun"
+            />
+          </div>
         </div> */}
+
+        <div className="h-64 sm:h-96 xl:h-[540px]">
+          <Carousel>
+            <img src={asset1} alt="people having fun" />
+            <img src={asset2} alt="people having fun" />
+            <img src={asset3} alt="people having fun" />
+          </Carousel>
+        </div>
       </section>
 
       {/* What you get */}
@@ -51,7 +78,10 @@ export default function Home() {
 
       {/* Testimonials */}
       <Testimonials />
-      <div className="pt-28 px-6 md:px-14 xl:px-[130px] text-center">
+      <form
+        onSubmit={(e) => e.preventDefault()}
+        className="pt-28 px-6 md:px-14 xl:px-[130px] text-center"
+      >
         <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
           Join Magno’s newsletter!
         </h2>
@@ -65,8 +95,13 @@ export default function Home() {
           placeholder="Your email address"
           className="w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-3 rounded-lg"
         />
-        <button className="px-[62.5px] block w-fit mx-auto bg-[#EF5B44] rounded-[30px] py-3 mt-8 border border-[#EF5B44] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)]">Subscribe</button>
-      </div>
+        <button
+          type="submit"
+          className="px-[62.5px] block w-fit mx-auto bg-[#EF5B44] rounded-[30px] py-3 mt-8 border border-[#EF5B44] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)]"
+        >
+          Subscribe
+        </button>
+      </form>
       <Contact />
       <Footer />
     </main>
