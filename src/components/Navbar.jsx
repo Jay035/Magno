@@ -25,7 +25,7 @@ export function Navbar() {
         } absolute top-0 bg-[#11141d] transition-all duration-100 lg:bg-transparent lg:relative h-screen lg:h-fit w-full lg:w-fit ease-in-out flex flex-col lg:flex-row lg:gap-12 lg:justify-between lg:items-center text-base md:text-lg`}
       >
         {/* close button */}
-        <div
+        {/* <div
           className="flex flex-col gap-1 cursor-pointer w-fit ml-auto lg:hidden"
           //   className="mb-2 text-2xl cursor-pointer w-fit ml-auto lg:hidden"
           onClick={(e) => {
@@ -36,7 +36,7 @@ export function Navbar() {
           <p className="sr-only">Close</p>
           <span className="w-7 h-[3px] bg-[#EAECF0] block rotate-[45deg] translate-y-2"></span>
           <span className="w-7 h-[3px] bg-[#EAECF0] block rotate-[495deg] translate-y-1"></span>
-        </div>
+        </div> */}
         <div className="flex flex-col items-center gap-6 mt-40 lg:mt-0 lg:flex-row">
           <p
             onClick={(e) => {
@@ -71,7 +71,7 @@ export function Navbar() {
             }}
           >
             <NavLink
-              to="/events"
+              to="/activities"
               className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               Events
@@ -84,7 +84,7 @@ export function Navbar() {
             }}
           >
             <NavLink
-              to="/aboutUs"
+              to="/blog"
               className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               Blog
@@ -125,7 +125,7 @@ export function Navbar() {
                   logOut();
                   setMenuOpen((prevState) => !prevState);
                 }}
-                className="bg-[#EF5B44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent cursor-pointer"
+                className="bg-[#EF5B44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0] cursor-pointer"
               >
                 SIGN OUT
               </p>
@@ -155,7 +155,7 @@ export function Navbar() {
               >
                 <NavLink
                   to="/login"
-                  className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent"
+                  className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
                 >
                   SIGN IN
                 </NavLink>
@@ -184,7 +184,7 @@ export function Navbar() {
                 logOut();
                 setMenuOpen((prevState) => !prevState);
               }}
-              className="bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent cursor-pointer"
+              className="bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0] cursor-pointer"
             >
               SIGN OUT
             </p>
@@ -214,7 +214,7 @@ export function Navbar() {
             >
               <NavLink
                 to="/login"
-                className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent"
+                className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
               >
                 SIGN IN
               </NavLink>
@@ -224,15 +224,15 @@ export function Navbar() {
       </div>
 
       <div
-        className="flex flex-col gap-1 cursor-pointer lg:hidden"
+        className="z-50 flex flex-col gap-1 items-center cursor-pointer lg:hidden"
         onClick={(e) => {
           e.preventDefault();
           setMenuOpen((prevState) => !prevState);
         }}
       >
-        <span className="w-7 h-[3px] bg-white block"></span>
-        <span className="w-7 h-[3px] bg-white block"></span>
-        <span className="w-7 h-[3px] bg-white block"></span>
+        <span className={`w-5 h-[3px] bg-white block rounded-lg transition-all duration-150 ${menuOpen ? `rotate-[45deg] translate-y-4 w-7` : ``}`}></span>
+        <span className={`w-8 h-[3px] bg-white block rounded-lg transition-all duration-150 ${menuOpen ? `hidden` : ``}`}></span>
+        <span className={`w-5 h-[3px] bg-white block rounded-lg transition-all duration-150 ${menuOpen ? `rotate-[495deg] translate-y-[10px] w-7` : ``}`}></span>
       </div>
     </nav>
   );

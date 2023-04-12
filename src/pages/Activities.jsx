@@ -1,115 +1,122 @@
 import Slider from "react-slick";
-import img1 from "../assets/paintballing.jpg";
+import paintBalling from "../assets/paintballing.jpg";
+import horseRiding from "../assets/horse-riding.jpg";
+import movieNight from "../assets/movie-night.jpg";
+import VRGames from "../assets/VR games.jpg";
+import party from "../assets/party.jpg";
+import bowling from "../assets/man-bowling.jpg";
 
 export default function Events() {
   const items = [
     {
       id: 1,
       title: "Parties",
-      imgUrl: img1,
+      imgUrl: party,
     },
     {
       id: 2,
       title: "Movies",
-      imgUrl: img1,
+      imgUrl: movieNight,
     },
     {
       id: 3,
       title: "Concerts",
-      imgUrl: img1,
+      imgUrl: paintBalling,
     },
     {
       id: 4,
       title: "Paint balling",
-      imgUrl: img1,
+      imgUrl: paintBalling,
     },
     {
       id: 5,
       title: "Swimming",
-      imgUrl: img1,
+      imgUrl: paintBalling,
     },
     {
       id: 6,
       title: "Video games",
-      imgUrl: img1,
+      imgUrl: paintBalling,
     },
     {
       id: 7,
       title: "Board games",
-      imgUrl: img1,
+      imgUrl: paintBalling,
     },
     {
       id: 8,
       title: "VR games",
-      imgUrl: img1,
+      imgUrl: VRGames,
     },
     {
       id: 9,
       title: "Bowling",
-      imgUrl: img1,
+      imgUrl: bowling,
     },
     {
       id: 10,
       title: "Boat tours",
-      imgUrl: img1,
+      imgUrl: bowling,
     },
     {
       id: 11,
       title: "Jet skiing",
-      imgUrl: img1,
+      imgUrl: bowling,
     },
     {
       id: 12,
       title: "Go carting",
-      imgUrl: img1,
+      imgUrl: bowling,
     },
     {
       id: 13,
       title: "Quad biking ",
-      imgUrl: img1,
+      imgUrl: bowling,
     },
     {
       id: 14,
       title: "Hiking",
-      imgUrl: img1,
+      imgUrl: bowling,
     },
     {
       id: 15,
       title: "Horseback riding",
-      imgUrl: img1,
+      imgUrl: horseRiding,
     },
     {
       id: 16,
       title: "Painting",
-      imgUrl: img1,
+      imgUrl: paintBalling,
     },
     {
       id: 17,
       title: "Excursions",
-      imgUrl: img1,
+      imgUrl: bowling,
     },
     {
       id: 18,
       title: "Kayaking",
-      imgUrl: img1,
+      imgUrl: bowling,
     },
     {
       id: 19,
       title: "Workouts",
-      imgUrl: img1,
+      imgUrl: bowling,
     },
   ];
 
   return (
     <div className="text-center mt-10 pb-20 px-6 md:px-12 overflow-hidden">
-      <h2 className="text-2xl capitalize mb-8 font-medium">
-        Our activities{" "}
-      </h2>
+      <h2 className="text-2xl capitalize mb-8 font-medium">Our activities </h2>
       <section className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {items?.map((item) => (
           <div key={item.id} className="relative max-w-sm mx-auto">
-            <img src={item.imgUrl} alt={item.title} />
-            <div className="absolute top-0 z-10 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
+            <img
+              className="max-h-[240px] min-w-[380px] object-center object-cover w-full"
+              src={item.imgUrl}
+              alt={item.title}
+            />
+            <div className="mt-4 text-white">
               <h1 className="text-2xl">{item.title}</h1>
             </div>
           </div>

@@ -6,26 +6,30 @@ import { Navbar } from "./components/Navbar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Loader from "./components/Loader";
+import Footer from "./components/Footer";
+import NotFound from "./pages/NotFound";
 
 const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const Login = lazy(() => import("./pages/Login"));
 const SignUp = lazy(() => import("./pages/SignUp"));
-const Events = lazy(() => import("./pages/Events"));
+const Activities = lazy(() => import("./pages/Activities"));
 
 function App() {
   return (
-    <div className="App bg-[#06070B] text-white/90 h-full">
+    <div className="scroll-smooth bg-[#06070B] text-white/90 h-full">
       <Router>
         <Suspense fallback={<Loader />}>
         <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/aboutUs" element={<AboutUs />} />
-            <Route path="/events" element={<Events />} />
+            <Route path="/activities" element={<Activities />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<SignUp />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
+          <Footer />
         </Suspense>
       </Router>
     </div>

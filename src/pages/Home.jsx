@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import { Benefits } from "../components/Benefits";
-import Footer from "../components/Footer";
 import { HeroSection } from "../components/HeroSection";
 import { HowItWorks } from "../components/HowItWorks";
 import { Testimonials } from "../components/Testimonials";
-import { GetInvolved } from "../components/GetInvolved";
 import asset1 from "../assets/asset-1.png";
 import asset2 from "../assets/asset-2.png";
 import asset3 from "../assets/asset-3.png";
+import asset4 from "../assets/asset-4.png";
 import Contact from "../components/Contact";
 import { Carousel } from "flowbite-react";
 
@@ -53,6 +52,7 @@ export default function Home() {
             <img src={asset1} alt="people having fun" />
             <img src={asset2} alt="people having fun" />
             <img src={asset3} alt="people having fun" />
+            <img src={asset4} alt="people having fun" />
           </Carousel>
         </div>
       </section>
@@ -64,10 +64,10 @@ export default function Home() {
       {/* <div className="px-6 md:px-24 mb-28 "> */}
 
       <Link
-        to="/events"
+        to="/activities"
         className="mb-28 mt-16 border text-center w-fit mx-auto border-[#EAECF0] py-2 rounded-[50px] px-8 md:px-[55px] text-[#EAECF0] text-base sm:text-xl md:text-2xl"
       >
-        EXPLORE OUR EVENTS AND ACTIVITIES
+        EXPLORE OUR ACTIVITIES
       </Link>
       {/* </div> */}
 
@@ -103,7 +103,6 @@ export default function Home() {
         </button>
       </form>
       <Contact />
-      <Footer />
     </main>
   );
 }
