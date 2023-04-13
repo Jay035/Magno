@@ -9,9 +9,13 @@ import asset3 from "../assets/asset-3.png";
 import asset4 from "../assets/asset-4.png";
 import Contact from "../components/Contact";
 import { Carousel } from "flowbite-react";
+import { Navbar } from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
+    <>
+    <Navbar />
     <main className="home flex flex-col gap-6">
       <HeroSection />
       <section className="text-center px-6 sm:px-14 md:px-20 xl:px-[270px] overflow-hidden py-6 sm:py-14 mx-auto grid gap-6 lg:gap-16">
@@ -104,5 +108,7 @@ export default function Home() {
       </form>
       <Contact />
     </main>
+    <Footer />
+    </>
   );
 }

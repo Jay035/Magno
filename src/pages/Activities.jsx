@@ -1,10 +1,12 @@
 import Slider from "react-slick";
 import paintBalling from "../assets/paintballing.jpg";
-import horseRiding from "../assets/horse-riding.jpg";
+import horseRiding from "../assets/games.jpg";
 import movieNight from "../assets/movie-night.jpg";
 import VRGames from "../assets/VR games.jpg";
 import party from "../assets/party.jpg";
 import bowling from "../assets/man-bowling.jpg";
+import { Navbar } from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Events() {
   const items = [
@@ -106,24 +108,28 @@ export default function Events() {
   ];
 
   return (
-    <div className="text-center mt-10 pb-20 px-6 md:px-12 overflow-hidden">
-      <h2 className="text-2xl capitalize mb-8 font-medium">Our activities </h2>
-      <section className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-        {items?.map((item) => (
-          <div key={item.id} className="relative max-w-sm mx-auto">
-            <img
-              className="max-h-[240px] min-w-[380px] object-center object-cover w-full"
-              src={item.imgUrl}
-              alt={item.title}
-            />
-            <div className="mt-4 text-white">
-              <h1 className="text-2xl">{item.title}</h1>
+    <>
+      <Navbar />
+      <main className="text-center mt-10 pb-20 px-6 md:px-12 overflow-hidden">
+        <h2 className="text-2xl capitalize mb-8 font-medium">
+          Our activities{" "}
+        </h2>
+        <section className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {items?.map((item) => (
+            <div key={item.id} className="relative max-w-sm mx-auto">
+              <img
+                className="max-h-[240px] min-w-[380px] object-center object-cover w-full"
+                src={item.imgUrl}
+                alt={item.title}
+              />
+              <div className="mt-4 text-white">
+                <h1 className="text-2xl">{item.title}</h1>
+              </div>
             </div>
-          </div>
-        ))}
-      </section>
-      {/* image slider */}
-      {/* <Slider {...settings}>
+          ))}
+        </section>
+        {/* image slider */}
+        {/* <Slider {...settings}>
         <div className="relative max-w-xl">
           <img src={img1} alt="img" />
           <div className="absolute top-0 z-50 flex justify-center bg-[#01050b]/70 w-full  h-full items-center text-white">
@@ -185,6 +191,8 @@ export default function Events() {
           </div>
         </div>
       </Slider> */}
-    </div>
+      </main>
+      <Footer />
+    </>
   );
 }

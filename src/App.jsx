@@ -2,11 +2,9 @@ import { lazy, Suspense, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Loader from "./components/Loader";
-import Footer from "./components/Footer";
 import NotFound from "./pages/NotFound";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -20,7 +18,6 @@ function App() {
     <div className="scroll-smooth bg-[#06070B] text-white/90 h-full">
       <Router>
         <Suspense fallback={<Loader />}>
-        <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/aboutUs" element={<AboutUs />} />
@@ -29,7 +26,6 @@ function App() {
             <Route path="/register" element={<SignUp />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Footer />
         </Suspense>
       </Router>
     </div>
@@ -37,7 +33,6 @@ function App() {
 }
 
 export default App;
-
 
 export const settings = {
   dots: true,
