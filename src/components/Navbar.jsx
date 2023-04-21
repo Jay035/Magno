@@ -84,13 +84,13 @@ export function Navbar() {
             }}
           >
             <NavLink
-              to="/blog"
+              to="/events"
               className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
-              Blog
+              Events
             </NavLink>
           </p>
-          <p
+          {/* <p
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -103,11 +103,20 @@ export function Navbar() {
             >
               Contact
             </HashLink>
-          </p>
+          </p> */}
         </div>
 
         {/* CTA buttons */}
-        <div className="flex flex-col items-center mt-6 gap-8 lg:hidden">
+        <button className="mt-6 lg:hidden">
+          <HashLink
+            smooth
+            to="/#contact"
+            className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
+          >
+            CONTACT US
+          </HashLink>
+        </button>
+        {/* <div className="flex flex-col items-center mt-6 gap-8 lg:hidden">
           {auth.currentUser && (
             <div className="flex flex-col items-center gap-4">
               <div className="flex items-center gap-4 px-[18px] py-[10px] rounded-[50px] border border-[#EAECF0]">
@@ -162,11 +171,21 @@ export function Navbar() {
               </p>
             </div>
           )}
-        </div>
+        </div> */}
       </section>
 
       {/* CTA buttons */}
-      <div className="gap-4 hidden lg:flex">
+      <button className="hidden lg:flex">
+
+      <HashLink
+            smooth
+            to="/#contact"
+            className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
+            >
+            CONTACT US
+          </HashLink>
+            </button>
+      {/* <div className="gap-4 hidden lg:flex">
         {auth.currentUser && (
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-4 px-[18px] py-[10px] border border-[#EAECF0] rounded-[50px]">
@@ -221,7 +240,7 @@ export function Navbar() {
             </p>
           </div>
         )}
-      </div>
+      </div> */}
 
       <div
         className="z-50 flex flex-col gap-1 items-center cursor-pointer lg:hidden"

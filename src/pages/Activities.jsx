@@ -8,7 +8,7 @@ import bowling from "../assets/man-bowling.jpg";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 
-export default function Events() {
+export default function Activities() {
   const items = [
     {
       id: 1,
@@ -110,7 +110,7 @@ export default function Events() {
   return (
     <>
       <Navbar />
-      <main className="text-center mt-10 pb-20 px-6 md:px-12 overflow-hidden">
+      <main className="text-center mt-10 pb-20 px-6 md:px-12">
         <h2 className="text-2xl capitalize mb-8 font-medium">
           Our activities{" "}
         </h2>

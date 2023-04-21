@@ -36,8 +36,18 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar{
-  display: none;
+::-webkit-scrollbar {
+  width: 15px;
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #06070bc5;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #ef5b44bd;
 }
 
 .active{

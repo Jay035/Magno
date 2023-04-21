@@ -9,9 +9,10 @@ import NotFound from "./pages/NotFound";
 
 const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
-const Login = lazy(() => import("./pages/Login"));
-const SignUp = lazy(() => import("./pages/SignUp"));
+// const Login = lazy(() => import("./pages/Login"));
+// const SignUp = lazy(() => import("./pages/SignUp"));
 const Activities = lazy(() => import("./pages/Activities"));
+const Events = lazy(() => import("./pages/Events"));
 
 function App() {
   return (
@@ -22,8 +23,9 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="/activities" element={<Activities />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<SignUp />} />
+            <Route path="/events" element={<Events />} />
+            {/* <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<SignUp />} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

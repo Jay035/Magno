@@ -23,7 +23,7 @@ export function HeroSection() {
             people, make friends and have fun.
           </p>
           <Link
-            to="/register"
+            to="/activities"
             className="text-white px-8 bg-[#EF5B44] py-2 text-lg rounded-[50px] md:text-2xl mt-4 hover:bg-[#ef5b44]/75"
           >
             GET STARTED
