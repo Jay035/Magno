@@ -20,7 +20,7 @@ export default function Events() {
             <button className="mt-8">
               <Link
                 to="/"
-                className="bg-[#EF5B44] hover:bg-[#EF5B44]/80 py-2 px-4 text-base md:text-xl"
+                className="bg-[#EF5B44] hover:bg-[#EF5B44]/80 py-2 px-4 text-base rounded-[50px] md:text-xl"
               >
                 {" "}
                 GO HOME
