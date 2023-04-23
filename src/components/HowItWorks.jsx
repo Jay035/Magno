@@ -9,18 +9,18 @@ export function HowItWorks() {
         HOW IT WORKS{" "}
         <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
       </h2>
-      <div className="grid gap-8 lg:gap-16 md:grid-cols-3 items-start md:items-center justify-center py-10 mx-6 rounded-lg">
+      <div className="grid gap-8 lg:gap-16 md:grid-cols-2 items-start md:items-center justify-center py-10 mx-6 rounded-lg">
         {/* card 1 */}
-        <div className="py-2 text-center flex items-center flex-col w-full">
+        {/* <div className="py-2 text-center flex items-center flex-col w-full">
           <img src={userIcon} alt="" />
           <h2 className="text-white mt-8 mb-2">Register</h2>
           <p className="text-[#D0D5DD] text-base">
             {" "}
             Register by filling the sign up form
           </p>
-        </div>
+        </div> */}
         {/* card 2 */}
-        <div className=" text-center flex items-center flex-col py-8 border-y border-[#344054] md:py-0 md:px-8 md:border-y-0 md:border-x w-full">
+        <div className=" text-center flex items-center flex-col py-8 md:py-0 md:px-8 w-full">
         <img src={zap} alt="" />
           <h2 className="text-white mt-8 mb-2">Explore</h2>
           <p className="text-[#D0D5DD] text-base">
@@ -28,7 +28,7 @@ export function HowItWorks() {
           </p>
         </div>
         {/* card 3 */}
-        <div className=" py-2 text-center flex items-center flex-col w-full ">
+        <div className=" py-2 text-center flex items-center flex-col w-full border-t border-[#344054] md:border-t-0 md:border-l">
           
           <img src={briefcase} alt="" />
           <h2 className="text-white mt-8 mb-2"> Access our events and activities</h2>
