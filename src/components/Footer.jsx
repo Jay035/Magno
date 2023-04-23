@@ -10,7 +10,7 @@ export default function Footer() {
       </h1>
 
       <div className="flex flex-wrap gap-4 justify-center">
-        <Link to="/aboutUs" >About us</Link>
+        <Link to="/aboutUs">About us</Link>
         <a href="#">Terms of service</a>
         <a href="#">Privacy policy </a>
         <a href="#">Partnerships</a>

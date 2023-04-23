@@ -1,6 +1,6 @@
-import userIcon from '../assets/user-icon.svg';
-import zap from '../assets/zap.svg';
-import briefcase from '../assets/briefcase.svg';
+import userIcon from "../assets/user-icon.svg";
+import zap from "../assets/zap.svg";
+import briefcase from "../assets/briefcase.svg";
 
 export function HowItWorks() {
   return (
@@ -21,7 +21,7 @@ export function HowItWorks() {
         </div> */}
         {/* card 2 */}
         <div className=" text-center flex items-center flex-col py-8 md:py-0 md:px-8 w-full">
-        <img src={zap} alt="" />
+          <img src={zap} alt="" />
           <h2 className="text-white mt-8 mb-2">Explore</h2>
           <p className="text-[#D0D5DD] text-base">
             Explore events and get a ticket
@@ -29,9 +29,11 @@ export function HowItWorks() {
         </div>
         {/* card 3 */}
         <div className=" py-2 text-center flex items-center flex-col w-full border-t border-[#344054] md:border-t-0 md:border-l">
-          
           <img src={briefcase} alt="" />
-          <h2 className="text-white mt-8 mb-2"> Access our events and activities</h2>
+          <h2 className="text-white mt-8 mb-2">
+            {" "}
+            Access our events and activities
+          </h2>
           <p className="text-[#D0D5DD] text-base">
             Enjoy access to curated social activities and unlimited fun.
           </p>

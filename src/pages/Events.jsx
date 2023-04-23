@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
+import { events } from "../data/data";
 
 export default function Events() {
   return (
@@ -34,4 +35,3 @@ export default function Events() {
   );
 }
 
-export const events = [];

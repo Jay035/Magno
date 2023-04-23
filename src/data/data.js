@@ -115,3 +115,5 @@ export const items = [
     imgUrl: workout,
   },
 ];
+
+export const events = [];

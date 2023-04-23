@@ -176,15 +176,14 @@ export function Navbar() {
 
       {/* CTA buttons */}
       <button className="hidden lg:flex">
-
-      <HashLink
-            smooth
-            to="/#contact"
-            className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
-            >
-            CONTACT US
-          </HashLink>
-            </button>
+        <HashLink
+          smooth
+          to="/#contact"
+          className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
+        >
+          CONTACT US
+        </HashLink>
+      </button>
       {/* <div className="gap-4 hidden lg:flex">
         {auth.currentUser && (
           <div className="flex items-center gap-4">

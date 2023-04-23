@@ -4,8 +4,6 @@ import Footer from "../components/Footer";
 import { items } from "../data/data";
 
 export default function Activities() {
- 
-
   return (
     <>
       <Navbar />
