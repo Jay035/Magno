@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import friends from "../assets/friends.jpg";
+import img from "../assets/partnerships.jpg";
 
 export default function AboutUs() {
   return (
@@ -20,7 +20,7 @@ export default function AboutUs() {
             </p>
           </section>
           <section>
-            <img src={friends} alt="friends laughing" />
+            <img src={img} alt="friends laughing" />
           </section>
         </div>
       </main>
