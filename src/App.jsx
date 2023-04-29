@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 
 const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Partnerships = lazy(() => import("./pages/Partnerships"));
 // const Login = lazy(() => import("./pages/Login"));
 // const SignUp = lazy(() => import("./pages/SignUp"));
 const Activities = lazy(() => import("./pages/Activities"));
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/aboutUs" element={<AboutUs />} />
+            <Route path="/partnerships" element={<Partnerships />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/events" element={<Events />} />
             {/* <Route path="/login" element={<Login />} />

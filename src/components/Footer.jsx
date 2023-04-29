@@ -13,7 +13,7 @@ export default function Footer() {
         <Link to="/aboutUs">About us</Link>
         <a href="#">Terms of service</a>
         <a href="#">Privacy policy </a>
-        <a href="#">Partnerships</a>
+        <Link to="/partnerships">Partnerships</Link>
         {/* <a href="#">Advertise</a> */}
         <a href="#">Contact us</a>
       </div>
