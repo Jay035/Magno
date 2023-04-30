@@ -13,21 +13,19 @@
 
 @font-face {
   font-family: "Helvetica Neue Medium";
-  src: url("../public/fonts/neue-helvetica-cufonfonts/Helvetica\ Neue\ LT\ 65\ Medium.ttf");
+  src: url("/fonts/neue-helvetica-cufonfonts/Helvetica\ Neue\ LT\ 65\ Medium.ttf");
 }
 
 @font-face {
   font-family: "Helvetica Neue Regular";
-  src: url("../public/fonts/neue-helvetica-cufonfonts//Helvetica\ Neue\ LT\ 55\ Roman.ttf");
+  src: url("/fonts/neue-helvetica-cufonfonts//Helvetica\ Neue\ LT\ 55\ Roman.ttf");
 }
 
 @font-face {
   font-family: "Neue Haas Grotesk Display Pro";
-  src: url("../public/fonts/NeueHaasDisplayRoman.ttf");
+  src: url("/fonts/NeueHaasDisplayRoman.ttf");
 }
 
-/* @import 'slick-carousel/slick/slick.css';
-@import 'slick-carousel/slick/slick-theme.css'; */
 
 body {
   /* font-family: "Open Sans", sans-serif; */
@@ -48,6 +46,10 @@ body {
 
 ::-webkit-scrollbar-thumb{
   background-color: #ef5b44bd;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #ef5b44;
 }
 
 .active{

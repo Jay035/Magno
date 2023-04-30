@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 // import { BsTwitter } from "react-icons";
 export default function Footer() {
@@ -15,7 +16,9 @@ export default function Footer() {
         <a href="#">Privacy policy </a>
         <Link to="/partnerships">Partnerships</Link>
         {/* <a href="#">Advertise</a> */}
-        <a href="#">Contact us</a>
+        <HashLink
+            smooth
+            to="/#contact">Contact us</HashLink>
       </div>
 
       {/* (Facebook, Instagram and Twitter logos)  */}

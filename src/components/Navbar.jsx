@@ -3,13 +3,38 @@ import { useEffect, useState } from "react";
 import { auth } from "../config/config";
 import FormValidation from "../formValidation/FormValidation";
 import { HashLink, NavHashLink } from "react-router-hash-link";
+import { Power3, gsap } from "gsap";
+import { useRef } from "react";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { logOut } = FormValidation();
+  let tl = new gsap.timeline();
+  let ease = Power3.easeOut();
+
+  let logo = useRef(null);
+  let menuItem1 = useRef(null);
+  let menuItem2 = useRef(null);
+  let menuItem3 = useRef(null);
+  let menuItem4 = useRef(null);
+  let ctaButton = useRef(null);
+
+  // useEffect(() => {
+  //   tl.from(logo, 1, {
+  //     opacity: 0,
+  //     y: 100,
+  //   });
+  //   tl.from([menuItem1, menuItem2, menuItem3, menuItem4, ctaButton], 2, {
+  //     opacity: 0,
+  //     y: -200,
+  //     stagger: {
+  //       amount: 0.4,
+  //     },
+  //   });
+  // }, []);
 
   return (
-    <nav className=" flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-6 px-8 sm:px-14 xl:px-20">
+    <nav className="flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-6 px-8 sm:px-14 xl:px-20">
       <section>
         {/* <Link to="/">
           <h1 id="logo" className="text-2xl font-semibold w-fit">
@@ -24,21 +49,9 @@ export function Navbar() {
             : `-left-full opacity-0 lg:opacity-100 lg:left-0 transition-all duration-100 delay-75`
         } absolute top-0 bg-[#11141d] lg:bg-transparent lg:relative h-screen lg:h-fit w-full lg:w-fit ease-in-out flex flex-col lg:flex-row lg:gap-12 lg:justify-between lg:items-center text-base md:text-lg`}
       >
-        {/* close button */}
-        {/* <div
-          className="flex flex-col gap-1 cursor-pointer w-fit ml-auto lg:hidden"
-          //   className="mb-2 text-2xl cursor-pointer w-fit ml-auto lg:hidden"
-          onClick={(e) => {
-            e.preventDefault();
-            setMenuOpen((prevState) => !prevState);
-          }}
-        >
-          <p className="sr-only">Close</p>
-          <span className="w-7 h-[3px] bg-[#EAECF0] block rotate-[45deg] translate-y-2"></span>
-          <span className="w-7 h-[3px] bg-[#EAECF0] block rotate-[495deg] translate-y-1"></span>
-        </div> */}
         <div className="flex flex-col items-center gap-6 mt-40 lg:mt-0 lg:flex-row">
           <p
+          ref={(el) => (menuItem1 = el)}
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -52,6 +65,7 @@ export function Navbar() {
             </NavLink>
           </p>
           <p
+          ref={(el) => (menuItem2 = el)}
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -65,6 +79,7 @@ export function Navbar() {
             </NavLink>
           </p>
           <p
+          ref={(el) => (menuItem3 = el)}
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -78,6 +93,7 @@ export function Navbar() {
             </NavLink>
           </p>
           <p
+          ref={(el) => (menuItem4 = el)}
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -90,24 +106,10 @@ export function Navbar() {
               Events
             </NavLink>
           </p>
-          {/* <p
-            onClick={(e) => {
-              e.preventDefault();
-              setMenuOpen((prevState) => !prevState);
-            }}
-          >
-            <HashLink
-              smooth
-              to="/#contact"
-              className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
-            >
-              Contact
-            </HashLink>
-          </p> */}
         </div>
 
         {/* CTA buttons */}
-        <button className="mt-6 lg:hidden">
+        <button ref={(el) => (ctaButton = el)} className="mt-6 lg:hidden">
           <HashLink
             smooth
             to="/#contact"
@@ -175,7 +177,7 @@ export function Navbar() {
       </section>
 
       {/* CTA buttons */}
-      <button className="hidden lg:flex">
+      <button ref={(el) => (ctaButton = el)} className="hidden lg:flex">
         <HashLink
           smooth
           to="/#contact"

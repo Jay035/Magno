@@ -9,7 +9,8 @@ export default function Events() {
       <Navbar />
       <main className="text-center mt-10 pb-20 px-6 md:px-12 h-fit min-h-[90vh]">
         <h2 className="text-2xl capitalize mb-12 font-medium">
-          Our activities{" "}
+          Our Events{" "}
+          <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
         </h2>
         {events.length > 0 ? (
           events?.map((event) => <div className=""></div>)

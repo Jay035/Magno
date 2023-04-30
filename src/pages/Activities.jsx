@@ -1,4 +1,3 @@
-import Slider from "react-slick";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import { items } from "../data/data";
@@ -10,6 +9,7 @@ export default function Activities() {
       <main className="text-center mt-10 pb-20 px-6 md:px-12">
         <h2 className="text-2xl capitalize mb-8 font-medium">
           Our activities{" "}
+          <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
         </h2>
         <section className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {items?.map((item) => (
