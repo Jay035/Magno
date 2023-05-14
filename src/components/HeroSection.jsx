@@ -15,7 +15,7 @@ export function HeroSection() {
       gsap.from(".text", {
         opacity: 0,
         duration: 2,
-        y: 100,
+        x: 100,
         stagger: {
           amount: 0.4,
         },
