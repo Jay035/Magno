@@ -2,39 +2,39 @@ import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { auth } from "../config/config";
 import FormValidation from "../formValidation/FormValidation";
-import { HashLink, NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import { Power3, gsap } from "gsap";
 import { useRef } from "react";
+import { useLayoutEffect } from "react";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { logOut } = FormValidation();
-  let tl = new gsap.timeline();
-  let ease = Power3.easeOut();
 
   let logo = useRef(null);
-  let menuItem1 = useRef(null);
-  let menuItem2 = useRef(null);
-  let menuItem3 = useRef(null);
-  let menuItem4 = useRef(null);
-  let ctaButton = useRef(null);
+  let hamburger = useRef(null);
+  let nav = useRef(null);
 
-  // useEffect(() => {
-  //   tl.from(logo, 1, {
-  //     opacity: 0,
-  //     y: 100,
-  //   });
-  //   tl.from([menuItem1, menuItem2, menuItem3, menuItem4, ctaButton], 2, {
-  //     opacity: 0,
-  //     y: -200,
-  //     stagger: {
-  //       amount: 0.4,
-  //     },
-  //   });
-  // }, []);
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(".list_item", {
+        opacity: 0,
+        duration: 2,
+        y: 80,
+        stagger: {
+          amount: 0.4,
+        },
+        ease: Power3,
+      });
+    }, nav);
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <nav className="flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-6 px-8 sm:px-14 xl:px-20">
+    <nav
+      ref={nav}
+      className="flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-6 px-8 sm:px-14 xl:px-20"
+    >
       <section>
         {/* <Link to="/">
           <h1 id="logo" className="text-2xl font-semibold w-fit">
@@ -51,7 +51,7 @@ export function Navbar() {
       >
         <div className="flex flex-col items-center gap-6 mt-40 lg:mt-0 lg:flex-row">
           <p
-          ref={(el) => (menuItem1 = el)}
+          className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -59,13 +59,13 @@ export function Navbar() {
           >
             <NavLink
               to="/"
-              className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               Home
             </NavLink>
           </p>
           <p
-          ref={(el) => (menuItem2 = el)}
+          className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -73,13 +73,13 @@ export function Navbar() {
           >
             <NavLink
               to="/aboutUs"
-              className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               About us
             </NavLink>
           </p>
           <p
-          ref={(el) => (menuItem3 = el)}
+          className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -87,13 +87,13 @@ export function Navbar() {
           >
             <NavLink
               to="/activities"
-              className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               Activities
             </NavLink>
           </p>
           <p
-          ref={(el) => (menuItem4 = el)}
+          className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -101,7 +101,7 @@ export function Navbar() {
           >
             <NavLink
               to="/events"
-              className="text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
               Events
             </NavLink>
@@ -109,11 +109,11 @@ export function Navbar() {
         </div>
 
         {/* CTA buttons */}
-        <button ref={(el) => (ctaButton = el)} className="mt-6 lg:hidden">
+        <button className="mt-6 lg:hidden">
           <HashLink
             smooth
             to="/#contact"
-            className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
+            className="list_item border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
           >
             CONTACT US
           </HashLink>
@@ -177,11 +177,11 @@ export function Navbar() {
       </section>
 
       {/* CTA buttons */}
-      <button ref={(el) => (ctaButton = el)} className="hidden lg:flex">
+      <button className="hidden lg:flex">
         <HashLink
           smooth
           to="/#contact"
-          className="border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
+          className="list_item border border-[#ef5b44] bg-[#ef5b44] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
         >
           CONTACT US
         </HashLink>
@@ -244,6 +244,7 @@ export function Navbar() {
       </div> */}
 
       <div
+        ref={(el) => (hamburger = el)}
         className="z-50 flex flex-col gap-1 items-center cursor-pointer lg:hidden"
         onClick={(e) => {
           e.preventDefault();
@@ -251,7 +252,7 @@ export function Navbar() {
         }}
       >
         <span
-          className={`w-5 h-[3px] bg-white block rounded-lg transition-all duration-150 ${
+          className={`w-5 h-[3px] bg-white block rounded-lg transition-all duration-150 delay-75 ${
             menuOpen ? `rotate-[45deg] translate-y-4 w-7` : ``
           }`}
         ></span>
@@ -261,7 +262,7 @@ export function Navbar() {
           }`}
         ></span>
         <span
-          className={`w-5 h-[3px] bg-white block rounded-lg transition-all duration-150 ${
+          className={`w-5 h-[3px] bg-white block rounded-lg transition-all duration-150 delay-75 ${
             menuOpen ? `rotate-[495deg] translate-y-[10px] w-7` : ``
           }`}
         ></span>

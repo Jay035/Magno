@@ -12,8 +12,8 @@ export default function Footer() {
 
       <div className="flex flex-wrap gap-4 justify-center">
         <Link to="/aboutUs">About us</Link>
-        <a href="#">Terms of service</a>
-        <a href="#">Privacy policy </a>
+        {/* <a href="#">Terms of service</a> */}
+        {/* <a href="#">Privacy policy </a> */}
         <Link to="/partnerships">Partnerships</Link>
         {/* <a href="#">Advertise</a> */}
         <HashLink

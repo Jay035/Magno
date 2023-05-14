@@ -11,15 +11,105 @@ import Contact from "../components/Contact";
 import { Carousel } from "flowbite-react";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Power3, gsap } from "gsap";
+import { useEffect, useLayoutEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
+// import { ScrollSmoother } from "gsap/ScrollSmoother";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const container = useRef(null);
+  const tl = gsap.timeline();
+  // useLayoutEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     // create the smooth scroller FIRST!
+  //     // smoother.current = ScrollSmoother.create({
+  //     //   smooth: 2, // seconds it takes to "catch up" to native scroll position
+  //     //   effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
+  //     // });
+  //     ScrollTrigger.create({
+  //       trigger: '.card_container',
+  //       pin: true,
+  //       start: 'center center',
+  //       end: '+=300',
+  //       markers: true,
+  //     });
+
+  //     tl.from(".card_2", { yPercent: 100 })
+  //     .from(".card_3", { xPercent: -100 })
+  //     .from(".card_4", { yPercent: 100 });
+  //   }, container);
+  //   return () => ctx.revert();
+  // }, []);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      let panels = gsap.utils.toArray(".card").forEach((wrapper, i) => {
+        ScrollTrigger.create({
+          trigger: wrapper,
+          start: "top top",
+          pin: true,
+          pinSpacing: false,
+          //       start: 'center center',
+          //       end: '+=300',
+          // snap: 1,
+        });
+        // gsap.to(wrapper.children, {
+        //   scale: "1.1",
+        // });
+        gsap.from(wrapper.children, {
+          // scale: "1.1",
+          ease: Power3.easeOut,
+          scrollTrigger: {
+            trigger: wrapper,
+            start: "top center",
+            end: "top top",
+            toggleActions: "play none reverse reset",
+          },
+        });
+      });
+      // let tops = panels.map((panel) =>
+      //   ScrollTrigger.create({ trigger: panel, start: "top top" })
+      // );
+      // panels.forEach((panel, i) => {
+      //   ScrollTrigger.create({
+      //     trigger: panel,
+      //     start: () =>
+      //       panel.offsetHeight < window.innerHeight
+      //         ? "top top"
+      //         : "bottom bottom",
+      //     pin: true,
+      //     markers:true,
+      //     pinSpacing: false,
+      //   });
+      // });
+      // ScrollTrigger.create({
+      //   snap: {
+      //     snapTo: (progress, self) => {
+      //       let panelStarts = tops.map((st) => st.start), // an Array of all the starting scroll positions. We do this on each scroll to make sure it's totally responsive. Starting positions may change when the user resizes the viewport
+      //         snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
+      //       return gsap.utils.normalize(
+      //         0,
+      //         ScrollTrigger.maxScroll(window),
+      //         snapScroll
+      //       ); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
+      //     },
+      //     duration: 0.5,
+      //   },
+      // });
+    }, container);
+    return () => ctx.revert();
+  }, []);
+
   return (
     <>
       <Navbar />
       <main className="home flex flex-col gap-6">
         <HeroSection />
-        <section className="text-center px-6 sm:px-14 md:px-20 xl:px-[270px] overflow-hidden py-6 sm:py-14 mx-auto grid gap-6 lg:gap-16">
-          <div className="">
+        <section ref={container} className="text-center py-6 sm:py-14 grid gap-6 lg:gap-16">
+          <div className="px-6 sm:px-14 md:px-20 xl:px-[270px]">
             <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
               Bringing people closer{" "}
               <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
@@ -32,19 +122,27 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="h-64 sm:h-96 xl:h-[540px]">
-            <Carousel
+          {/* <div className=""> */}
+            {/* <Carousel
               slideInterval={5000}
               indicators={false}
               leftControl=" "
               rightControl=" "
-            >
-              <img src={asset1} alt="people having fun" />
-              <img src={asset2} alt="people having fun" />
-              <img src={asset3} alt="people having fun" />
-              <img src={asset4} alt="people having fun" />
-            </Carousel>
-          </div>
+            > */}
+            <div className="card card_1">
+              <img className="h-screen object-cover w-full object-top" src={asset1} alt="people having fun" />
+            </div>
+            <div className="card card_2">
+              <img className="h-screen object-cover w-full object-top" src={asset2} alt="people having fun" />
+            </div>
+            <div className="card card_3">
+              <img className="h-screen object-cover w-full object-[top_center]" src={asset3} alt="people having fun" />
+            </div>
+            <div className="card card_4">
+              <img className="h-screen object-cover w-full" src={asset4} alt="people having fun" />
+            </div>
+            {/* </Carousel> */}
+          {/* </div> */}
         </section>
 
         {/* What you get */}

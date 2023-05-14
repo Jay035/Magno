@@ -32,7 +32,7 @@ export function Testimonials() {
           <div className="flex gap-2 items-center">
             <img className='w-14 sm:w-[66px] sm:h-[66px]' src={img2} alt="img 1" />
             <div className="">
-              <h1 className='w-fit text-base'>Geoffrey Gentry</h1>
+              <h1 className='w-fit text-base'>Jane Leo</h1>
               <p className='w-fit text-sm'>Port Harcourt, Nigeria</p>
             </div>
           </div>
@@ -45,7 +45,7 @@ export function Testimonials() {
           <div className="flex gap-2 items-center">
             <img className='w-14 sm:w-[66px] sm:h-[66px]' src={img3} alt="img 1" />
             <div className="">
-              <h1 className='w-fit text-base'>Geoffrey Gentry</h1>
+              <h1 className='w-fit text-base'>Louis Dalton</h1>
               <p className='w-fit text-sm'>Ontario, Canada</p>
             </div>
           </div>
