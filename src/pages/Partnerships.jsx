@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import friends from "../assets/friends.jpg";
+import img from "../assets/partnership.jpg";
 
 export default function AboutUs() {
   return (
@@ -11,6 +11,7 @@ export default function AboutUs() {
           <section>
             <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
               Partnerships
+              <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
             </h2>
             <p className="text-base md:text-xl text-[#D0D5DD] mb-8">
               We look to work with brands that are looking to partner or provide
@@ -20,7 +21,7 @@ export default function AboutUs() {
             </p>
           </section>
           <section>
-            <img src={friends} alt="friends laughing" />
+            <img src={img} alt="friends laughing" />
           </section>
         </div>
       </main>

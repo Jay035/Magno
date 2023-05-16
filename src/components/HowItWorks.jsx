@@ -28,7 +28,7 @@ export function HowItWorks() {
           </p>
         </div>
         {/* card 3 */}
-        <div className=" py-2 text-center flex items-center flex-col w-full border-t border-[#344054] md:border-t-0 md:border-l">
+        <div className="text-center flex items-center flex-col w-full py-8 md:py-0 md:px-8 border-t border-[#344054] md:border-t-0 md:border-l">
           <img src={briefcase} alt="" />
           <h2 className="text-white mt-8 mb-2">
             {" "}

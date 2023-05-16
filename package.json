@@ -9,8 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "expo": "^48.0.10",
-    "expo-font": "^11.1.1",
     "firebase": "^9.18.0",
     "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.3",

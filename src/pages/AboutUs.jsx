@@ -11,6 +11,7 @@ export default function AboutUs() {
           <section>
             <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
               About Us
+              <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
             </h2>
             <p className="text-base md:text-xl text-[#D0D5DD] mb-8">
               Magno is a premium entertainment service founded to bring people
