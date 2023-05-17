@@ -1,8 +1,10 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import friends from "../assets/friends.jpg";
+import { useState } from "react";
 
 export default function AboutUs() {
+  const [loading, setLoading] = useState(true);
   return (
     <>
       <Navbar />
