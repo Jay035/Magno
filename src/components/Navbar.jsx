@@ -252,17 +252,17 @@ export function Navbar() {
         }}
       >
         <span
-          className={`w-5 h-[3px] bg-white block rounded-lg transition-all duration-150 delay-75 ${
+          className={`w-5 h-[3px] bg-white dark:bg-white block rounded-lg transition-all duration-150 delay-75 ${
             menuOpen ? `rotate-[45deg] translate-y-4 w-7` : ``
           }`}
         ></span>
         <span
-          className={`w-8 h-[3px] bg-white block rounded-lg transition-all duration-150 ${
+          className={`w-8 h-[3px] bg-white dark:bg-white block rounded-lg transition-all duration-150 ${
             menuOpen ? `hidden` : ``
           }`}
         ></span>
         <span
-          className={`w-5 h-[3px] bg-white block rounded-lg transition-all duration-150 delay-75 ${
+          className={`w-5 h-[3px] bg-white dark:bg-white block rounded-lg transition-all duration-150 delay-75 ${
             menuOpen ? `rotate-[495deg] translate-y-[10px] w-7` : ``
           }`}
         ></span>
