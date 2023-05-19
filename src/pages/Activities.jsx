@@ -15,7 +15,7 @@ export default function Activities() {
           {items?.map((item) => (
             <div key={item.id} className="relative max-w-sm mx-auto">
               <img
-                className="max-h-[240px] min-w-[340px] object-center object-cover w-full"
+                className="max-h-[240px] mx-auto min-w-[340px] object-center object-cover w-full"
                 src={item.imgUrl}
                 alt={item.title}
               />
