@@ -3,12 +3,11 @@ import { Benefits } from "../components/Benefits";
 import { HeroSection } from "../components/HeroSection";
 import { HowItWorks } from "../components/HowItWorks";
 import { Testimonials } from "../components/Testimonials";
-import asset1 from "../assets/asset-1.png";
-import asset2 from "../assets/asset-2.png";
-import asset3 from "../assets/asset-3.png";
-import asset4 from "../assets/asset-4.png";
+import asset1 from "../assets/img-1.jpg";
+import asset2 from "../assets/img-2.jpg";
+import asset3 from "../assets/img-3.jpg";
+import asset4 from "../assets/img-4.jpg";
 import Contact from "../components/Contact";
-import { Carousel } from "flowbite-react";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Power3, gsap } from "gsap";
@@ -130,13 +129,13 @@ export default function Home() {
               rightControl=" "
             > */}
             <div className="card card_1">
-              <img className="h-screen object-cover w-full object-top" src={asset1} alt="people having fun" />
+              <img className="h-screen object-cover w-full object-center" src={asset1} alt="people having fun" />
             </div>
             <div className="card card_2">
               <img className="h-screen object-cover w-full object-top" src={asset2} alt="people having fun" />
             </div>
             <div className="card card_3">
-              <img className="h-screen object-cover w-full object-[top_center]" src={asset3} alt="people having fun" />
+              <img className="h-screen object-cover w-full object-center" src={asset3} alt="people having fun" />
             </div>
             <div className="card card_4">
               <img className="h-screen object-cover w-full" src={asset4} alt="people having fun" />
