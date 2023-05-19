@@ -54,7 +54,7 @@ export default function Home() {
         //   scale: "1.1",
         // });
         gsap.from(wrapper.children, {
-          // scale: "1.1",
+          scale: "1.1",
           ease: Power3.easeOut,
           scrollTrigger: {
             trigger: wrapper,
