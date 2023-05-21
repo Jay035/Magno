@@ -17,7 +17,7 @@ export default function Events() {
         ) : (
           <div className="flex flex-col justify-center items-center h-[50vh]">
             <p className="text-2xl md:text-3xl">
-              Oops!! There are no events at the moment. Check back later
+              Oops!! There are no events at the moment. Kindly check back later
             </p>
             <button className="mt-8">
               <Link

@@ -3,16 +3,15 @@ import { Benefits } from "../components/Benefits";
 import { HeroSection } from "../components/HeroSection";
 import { HowItWorks } from "../components/HowItWorks";
 import { Testimonials } from "../components/Testimonials";
-import asset1 from "../assets/asset-1.png";
-import asset2 from "../assets/asset-2.png";
-import asset3 from "../assets/asset-3.png";
-import asset4 from "../assets/asset-4.png";
+import asset1 from "../assets/img-1.jpg";
+import asset2 from "../assets/img-2.jpg";
+import asset3 from "../assets/img-3.jpg";
+import asset4 from "../assets/img-4.jpg";
 import Contact from "../components/Contact";
-import { Carousel } from "flowbite-react";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Power3, gsap } from "gsap";
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 // import { ScrollSmoother } from "gsap/ScrollSmoother";
@@ -20,29 +19,24 @@ import { useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const [email, setEmail] = useState("");
   const container = useRef(null);
   const tl = gsap.timeline();
-  // useLayoutEffect(() => {
-  //   const ctx = gsap.context(() => {
-  //     // create the smooth scroller FIRST!
-  //     // smoother.current = ScrollSmoother.create({
-  //     //   smooth: 2, // seconds it takes to "catch up" to native scroll position
-  //     //   effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
-  //     // });
-  //     ScrollTrigger.create({
-  //       trigger: '.card_container',
-  //       pin: true,
-  //       start: 'center center',
-  //       end: '+=300',
-  //       markers: true,
-  //     });
 
-  //     tl.from(".card_2", { yPercent: 100 })
-  //     .from(".card_3", { xPercent: -100 })
-  //     .from(".card_4", { yPercent: 100 });
-  //   }, container);
-  //   return () => ctx.revert();
-  // }, []);
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (email) {
+      // Perform your subscription logic here, e.g., make an API request to save the email
+      // to your newsletter subscription list.
+
+      console.log(`Subscribing ${email} to the newsletter...`);
+      // You can replace the console.log statement with your actual subscription code.
+    }
+  };
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -53,14 +47,14 @@ export default function Home() {
           pin: true,
           pinSpacing: false,
           //       start: 'center center',
-          //       end: '+=300',
+          // end: '+=600',
           // snap: 1,
         });
         // gsap.to(wrapper.children, {
         //   scale: "1.1",
         // });
         gsap.from(wrapper.children, {
-          // scale: "1.1",
+          scale: "1.1",
           ease: Power3.easeOut,
           scrollTrigger: {
             trigger: wrapper,
@@ -108,7 +102,10 @@ export default function Home() {
       <Navbar />
       <main className="home flex flex-col gap-6">
         <HeroSection />
-        <section ref={container} className="text-center py-6 sm:py-14 grid gap-6 lg:gap-16">
+        <section
+          ref={container}
+          className="text-center py-6 sm:py-14 grid gap-6 lg:gap-16"
+        >
           <div className="px-6 sm:px-14 md:px-20 xl:px-[270px]">
             <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
               Bringing people closer{" "}
@@ -123,25 +120,41 @@ export default function Home() {
           </div>
 
           {/* <div className=""> */}
-            {/* <Carousel
+          {/* <Carousel
               slideInterval={5000}
               indicators={false}
               leftControl=" "
               rightControl=" "
             > */}
-            <div className="card card_1">
-              <img className="h-screen object-cover w-full object-top" src={asset1} alt="people having fun" />
-            </div>
-            <div className="card card_2">
-              <img className="h-screen object-cover w-full object-top" src={asset2} alt="people having fun" />
-            </div>
-            <div className="card card_3">
-              <img className="h-screen object-cover w-full object-[top_center]" src={asset3} alt="people having fun" />
-            </div>
-            <div className="card card_4">
-              <img className="h-screen object-cover w-full" src={asset4} alt="people having fun" />
-            </div>
-            {/* </Carousel> */}
+          <div className="card card_1">
+            <img
+              className="h-screen object-cover w-full object-center"
+              src={asset1}
+              alt="people having fun"
+            />
+          </div>
+          <div className="card card_2">
+            <img
+              className="h-screen object-cover w-full object-top"
+              src={asset2}
+              alt="people having fun"
+            />
+          </div>
+          <div className="card card_3">
+            <img
+              className="h-screen object-cover w-full object-center"
+              src={asset3}
+              alt="people having fun"
+            />
+          </div>
+          <div className="card card_4">
+            <img
+              className="h-screen object-cover w-full"
+              src={asset4}
+              alt="people having fun"
+            />
+          </div>
+          {/* </Carousel> */}
           {/* </div> */}
         </section>
 
@@ -167,7 +180,7 @@ export default function Home() {
         {/* Testimonials */}
         <Testimonials />
         <form
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={handleSubscribe}
           className="pt-28 px-6 md:px-14 xl:px-[130px] text-center"
         >
           <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
@@ -178,8 +191,9 @@ export default function Home() {
           </p>
           <input
             type="email"
-            name=""
-            id=""
+            name="user_email"
+            value={email}
+            onChange={handleEmailChange}
             placeholder="Your email address"
             className="w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-3 rounded-lg"
           />

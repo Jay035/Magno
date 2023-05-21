@@ -6,7 +6,7 @@ export default function Activities() {
   return (
     <>
       <Navbar />
-      <main className="text-center mt-10 pb-20 px-6 md:px-12">
+      <main className="text-center mt-10 pb-20 px-6 md:px-12 w-full">
         <h2 className="text-2xl capitalize mb-8 font-medium">
           Our activities{" "}
           <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
@@ -15,7 +15,7 @@ export default function Activities() {
           {items?.map((item) => (
             <div key={item.id} className="relative max-w-sm mx-auto">
               <img
-                className="max-h-[240px] min-w-[380px] object-center object-cover w-full"
+                className="max-h-[240px] mx-auto min-w-[340px] object-center object-cover w-full"
                 src={item.imgUrl}
                 alt={item.title}
               />
