@@ -14,6 +14,7 @@ import { Power3, gsap } from "gsap";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import Transition from "../components/Transition";
 // import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -100,6 +101,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Transition />
       <main className="home flex flex-col gap-6">
         <HeroSection />
         <section

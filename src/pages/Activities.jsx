@@ -1,11 +1,13 @@
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import { items } from "../data/data";
+import Transition from "../components/Transition";
 
 export default function Activities() {
   return (
     <>
       <Navbar />
+      <Transition />
       <main className="text-center mt-10 pb-20 px-6 md:px-12 w-full">
         <h2 className="text-2xl capitalize mb-8 font-medium">
           Our activities{" "}

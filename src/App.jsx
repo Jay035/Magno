@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Loader from "./components/Loader";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="scroll-smooth bg-[#06070B] text-white/90 h-full w-full">
       <Router>
+        <ScrollToTop />
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route exact path="/" element={<Home />} />

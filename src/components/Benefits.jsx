@@ -30,7 +30,7 @@ export function Benefits() {
   }, []);
   return (
     <div ref={container} className="mt-[800px] px-6 md:px-14 xl:px-[130px]">
-      <h2 className="text-center leading-[100px] md:leading-[120px] text-2xl md:text-3xl text-[#EAECF0] capitalize">
+      <h2 className="text-center leading-[100px] md:leading-[120px] text-2xl md:text-[32px] text-[#EAECF0] uppercase">
         What you get <span className="p-[2px] text-[1px] ml-[4px] mb-[1px] bg-[#EF5B44]"></span>
       </h2>
       <div className="grid gap-4 text-center text-white">

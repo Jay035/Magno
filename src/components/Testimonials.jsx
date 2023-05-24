@@ -5,7 +5,7 @@ import img3 from '../assets/testimonial-avatar-3.png';
 export function Testimonials() {
   return (
     <section className="text-center pt-12 pb-20 px-6 md:px-14 xl:px-[130px]">
-      <h2 className="text-2xl capitalize mb-6 leading-[100px] md:leading-[120px]">
+      <h2 className="text-2xl md:text-[32px] uppercase mb-6 leading-[100px] md:leading-[120px]">
         Testimonials{" "}
         <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
       </h2>
