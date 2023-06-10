@@ -5,7 +5,7 @@ import img1 from "../assets/paintballing.jpg";
 
 export function GetInvolved() {
   return (
-    <section className="py-12 px-6 md:px-24 xl:px-20 text-center flex flex-col gap-8">
+    <section className="py-12 max--5xl mx-auto w-full px-[9.5vw] text-center flex flex-col gap-8">
       <div className="mb-8">
         <h2 className="text-center text-2xl capitalize mb-6 font-medium">
           Get Involved

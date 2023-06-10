@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 // import { BsTwitter } from "react-icons";
 export default function Footer() {
   return (
-    <section className="py-12 px-6 md:px-14 xl:px-[130px] text-center flex flex-col gap-12 border-t border-[#7a7c8670]">
+    <section className="py-12 px-[9.5vw] text-center flex flex-col gap-12 border-t border-[#7a7c8670]">
       {/* footer logo */}
       <h1 id="logo" className="text-2xl">
         <Link to="/">Magno</Link>

@@ -4,7 +4,7 @@ import img3 from '../assets/testimonial-avatar-3.png';
 
 export function Testimonials() {
   return (
-    <section className="text-center pt-12 pb-20 px-6 md:px-14 xl:px-[130px]">
+    <section className="text-center pt-12 pb-20 px-[9.5vw]">
       <h2 className="text-2xl md:text-[32px] uppercase mb-6 leading-[100px] md:leading-[120px]">
         Testimonials{" "}
         <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
@@ -17,7 +17,7 @@ export function Testimonials() {
             next one. “
           </h2>
           <div className="flex gap-2 items-center">
-            <img className='w-14 sm:w-[66px] sm:h-[66px]' src={img1} alt="img 1" />
+            <img className='w-14 sm:w-[66px] sm:h-[66px]' loading="lazy" src={img1} alt="img 1" />
             <div className="">
               <h1 className='w-fit text-base'>Jane Leo</h1>
               <p className='w-fit text-sm'>Lagos, Nigeria</p>
@@ -30,7 +30,7 @@ export function Testimonials() {
             confidence and self esteem. “
           </h2>
           <div className="flex gap-2 items-center">
-            <img className='w-14 sm:w-[66px] sm:h-[66px]' src={img2} alt="img 1" />
+            <img className='w-14 sm:w-[66px] sm:h-[66px]' loading="lazy" src={img2} alt="img 1" />
             <div className="">
               <h1 className='w-fit text-base'>Geoffrey Gentry</h1>
               <p className='w-fit text-sm'>Port Harcourt, Nigeria</p>
@@ -43,7 +43,7 @@ export function Testimonials() {
             meet interesting people, relax and forget my troubles. “
           </h2>
           <div className="flex gap-2 items-center">
-            <img className='w-14 sm:w-[66px] sm:h-[66px]' src={img3} alt="img 1" />
+            <img className='w-14 sm:w-[66px] sm:h-[66px]' loading="lazy" src={img3} alt="img 1" />
             <div className="">
               <h1 className='w-fit text-base'>Louis Dalton</h1>
               <p className='w-fit text-sm'>Ontario, Canada</p>
