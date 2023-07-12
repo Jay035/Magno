@@ -1,11 +1,13 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import img from "../assets/partnership.jpg";
+import Transition from "../components/Transition";
 
 export default function AboutUs() {
   return (
     <>
       <Navbar />
+      <Transition />
       <main>
         <div className="px-6 sm:px-14 md:px-20 xl:px-[270px] mb-8">
           <section>

@@ -25,14 +25,14 @@ export function HeroSection() {
     return () => ctx.revert();
   }, []);
   return (
-    <section ref={hero} className="relative grid w-full md:items-center gap-16 h-screen xl:h-[1047.4px]">
+    <section ref={hero} className="relative grid w-full md:items-center gap-16 h-screen">
       <img
         src={heroImg}
-        className="hero-img h-screen xl:h-[1047.4px] object-cover object-center w-full"
+        className="hero-img h-screen object-cover object-center w-full"
         alt="hero img"
       />
       {/* hero container */}
-      <div className="hero-container absolute top-0 text-center h-screen xl:h-[1047.4px] px-6 sm:px-14 md:px-24 w-full mx-auto">
+      <div className="hero-container absolute top-0 text-center h-screen xl:h-[1047.4px] px-[9.5vw] w-full mx-auto">
         <div className="max-w-2xl z-[999999] mx-auto mt-20 lg:mt-32 tracking-wide flex flex-col items-center gap-4 ">
           <h1
             className="text text-5xl xl:text-[110.667px] leading-[1.2] md:text-5xl xl:text-6xl xl:leading-snug text-white"

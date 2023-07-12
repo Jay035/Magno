@@ -14,6 +14,10 @@ import { Power3, gsap } from "gsap";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import Transition from "../components/Transition";
+import { addDoc, collection } from "@firebase/firestore";
+import { toast } from "react-toastify";
+import { db } from "../config/config";
 // import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,91 +26,97 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const container = useRef(null);
   const tl = gsap.timeline();
+  const usersEmailRef = collection(db, "newsletter-emails");
 
   const handleEmailChange = (event) => {
+    event.preventDefault()
     setEmail(event.target.value);
   };
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    if (email) {
-      // Perform your subscription logic here, e.g., make an API request to save the email
-      // to your newsletter subscription list.
-
+    try {
       console.log(`Subscribing ${email} to the newsletter...`);
-      // You can replace the console.log statement with your actual subscription code.
+      await addDoc(usersEmailRef, { email: email });
+      toast.success("Congratulations, you have subscribed to our newsletter");
+      console.log("Congratulations, you have subscribed to our newsletter");
+      setEmail("");
+    } catch (err) {
+      console.log(err.message);
+      toast.error(err.message);
     }
   };
 
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      let panels = gsap.utils.toArray(".card").forEach((wrapper, i) => {
-        ScrollTrigger.create({
-          trigger: wrapper,
-          start: "top top",
-          pin: true,
-          pinSpacing: false,
-          //       start: 'center center',
-          // end: '+=600',
-          // snap: 1,
-        });
-        // gsap.to(wrapper.children, {
-        //   scale: "1.1",
-        // });
-        gsap.from(wrapper.children, {
-          scale: "1.1",
-          ease: Power3.easeOut,
-          scrollTrigger: {
-            trigger: wrapper,
-            start: "top center",
-            end: "top top",
-            toggleActions: "play none reverse reset",
-          },
-        });
-      });
-      // let tops = panels.map((panel) =>
-      //   ScrollTrigger.create({ trigger: panel, start: "top top" })
-      // );
-      // panels.forEach((panel, i) => {
-      //   ScrollTrigger.create({
-      //     trigger: panel,
-      //     start: () =>
-      //       panel.offsetHeight < window.innerHeight
-      //         ? "top top"
-      //         : "bottom bottom",
-      //     pin: true,
-      //     markers:true,
-      //     pinSpacing: false,
-      //   });
-      // });
-      // ScrollTrigger.create({
-      //   snap: {
-      //     snapTo: (progress, self) => {
-      //       let panelStarts = tops.map((st) => st.start), // an Array of all the starting scroll positions. We do this on each scroll to make sure it's totally responsive. Starting positions may change when the user resizes the viewport
-      //         snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
-      //       return gsap.utils.normalize(
-      //         0,
-      //         ScrollTrigger.maxScroll(window),
-      //         snapScroll
-      //       ); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
-      //     },
-      //     duration: 0.5,
-      //   },
-      // });
-    }, container);
-    return () => ctx.revert();
-  }, []);
+  // useEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     let panels = gsap.utils.toArray(".card").forEach((wrapper, i) => {
+  //       ScrollTrigger.create({
+  //         trigger: wrapper,
+  //         start: "top top",
+  //         pin: true,
+  //         pinSpacing: false,
+  //         //       start: 'center center',
+  //         // end: '+=600',
+  //         // snap: 1,
+  //       });
+  //       // gsap.to(wrapper.children, {
+  //       //   scale: "1.1",
+  //       // });
+  //       gsap.from(wrapper.children, {
+  //         scale: "1.1",
+  //         ease: Power3.easeOut,
+  //         scrollTrigger: {
+  //           trigger: wrapper,
+  //           start: "top center",
+  //           end: "top top",
+  //           toggleActions: "play none reverse reset",
+  //         },
+  //       });
+  //     });
+  //     // let tops = panels.map((panel) =>
+  //     //   ScrollTrigger.create({ trigger: panel, start: "top top" })
+  //     // );
+  //     // panels.forEach((panel, i) => {
+  //     //   ScrollTrigger.create({
+  //     //     trigger: panel,
+  //     //     start: () =>
+  //     //       panel.offsetHeight < window.innerHeight
+  //     //         ? "top top"
+  //     //         : "bottom bottom",
+  //     //     pin: true,
+  //     //     markers:true,
+  //     //     pinSpacing: false,
+  //     //   });
+  //     // });
+  //     // ScrollTrigger.create({
+  //     //   snap: {
+  //     //     snapTo: (progress, self) => {
+  //     //       let panelStarts = tops.map((st) => st.start), // an Array of all the starting scroll positions. We do this on each scroll to make sure it's totally responsive. Starting positions may change when the user resizes the viewport
+  //     //         snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
+  //     //       return gsap.utils.normalize(
+  //     //         0,
+  //     //         ScrollTrigger.maxScroll(window),
+  //     //         snapScroll
+  //     //       ); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
+  //     //     },
+  //     //     duration: 0.5,
+  //     //   },
+  //     // });
+  //   }, container);
+  //   return () => ctx.revert();
+  // }, []);
 
   return (
     <>
       <Navbar />
+      <Transition />
       <main className="home flex flex-col gap-6">
         <HeroSection />
         <section
           ref={container}
-          className="text-center py-6 sm:py-14 grid gap-6 lg:gap-16"
+          className="text-center py-6 sm:py-14 "
         >
-          <div className="px-6 sm:px-14 md:px-20 xl:px-[270px]">
+          <div className="px-[9.5vw] mb-20">
             <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
               Bringing people closer{" "}
               <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
@@ -119,18 +129,13 @@ export default function Home() {
             </p>
           </div>
 
-          {/* <div className=""> */}
-          {/* <Carousel
-              slideInterval={5000}
-              indicators={false}
-              leftControl=" "
-              rightControl=" "
-            > */}
+
           <div className="card card_1">
             <img
               className="h-screen object-cover w-full object-center"
               src={asset1}
               alt="people having fun"
+              loading="lazy"
             />
           </div>
           <div className="card card_2">
@@ -138,6 +143,7 @@ export default function Home() {
               className="h-screen object-cover w-full object-top"
               src={asset2}
               alt="people having fun"
+              loading="lazy"
             />
           </div>
           <div className="card card_3">
@@ -145,6 +151,7 @@ export default function Home() {
               className="h-screen object-cover w-full object-center"
               src={asset3}
               alt="people having fun"
+              loading="lazy"
             />
           </div>
           <div className="card card_4">
@@ -152,10 +159,9 @@ export default function Home() {
               className="h-screen object-cover w-full"
               src={asset4}
               alt="people having fun"
+              loading="lazy"
             />
           </div>
-          {/* </Carousel> */}
-          {/* </div> */}
         </section>
 
         {/* What you get */}
@@ -181,7 +187,7 @@ export default function Home() {
         <Testimonials />
         <form
           onSubmit={handleSubscribe}
-          className="pt-28 px-6 md:px-14 xl:px-[130px] text-center"
+          className="pt-28 px-[9.5vw] text-center"
         >
           <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
             Join Magno’s newsletter!
@@ -195,11 +201,12 @@ export default function Home() {
             value={email}
             onChange={handleEmailChange}
             placeholder="Your email address"
-            className="w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-3 rounded-lg"
+            className="w-full max-w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-3 rounded-lg"
           />
           <button
             type="submit"
-            className="px-[62.5px] block w-fit mx-auto bg-[#EF5B44] rounded-[30px] py-3 mt-8 border border-[#EF5B44] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)]"
+            disabled={email === ""}
+            className="px-[62.5px] block w-fit mx-auto bg-[#EF5B44] rounded-[30px] py-3 mt-8 "
           >
             Subscribe
           </button>

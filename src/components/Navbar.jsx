@@ -33,7 +33,7 @@ export function Navbar() {
   return (
     <nav
       ref={nav}
-      className="flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-6 px-8 sm:px-14 xl:px-20"
+      className="flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-6 px-[9.5vw]"
     >
       <section>
         {/* <Link to="/">
@@ -51,7 +51,7 @@ export function Navbar() {
       >
         <div className="flex flex-col items-center gap-6 mt-40 lg:mt-0 lg:flex-row">
           <p
-          className="list_item"
+            className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -65,7 +65,7 @@ export function Navbar() {
             </NavLink>
           </p>
           <p
-          className="list_item"
+            className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -79,7 +79,7 @@ export function Navbar() {
             </NavLink>
           </p>
           <p
-          className="list_item"
+            className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -93,7 +93,7 @@ export function Navbar() {
             </NavLink>
           </p>
           <p
-          className="list_item"
+            className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);

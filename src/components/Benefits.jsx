@@ -2,14 +2,13 @@ import { Power3, gsap } from "gsap";
 import { useRef } from "react";
 import { useLayoutEffect } from "react";
 
-
 export function Benefits() {
   let container = useRef(null);
 
-  useLayoutEffect(() => {
+  // useLayoutEffect(() => {
+  const handleFocusAnim = () => {
     let ctx = gsap.context(() => {
       gsap.from(".list_item", {
-        
         stagger: {
           amount: 0.7,
         },
@@ -27,11 +26,14 @@ export function Benefits() {
       });
     }, container);
     return () => ctx.revert();
-  }, []);
+  };
+
+  // }, []);
   return (
-    <div ref={container} className="mt-[800px] px-6 md:px-14 xl:px-[130px]">
-      <h2 className="text-center leading-[100px] md:leading-[120px] text-2xl md:text-3xl text-[#EAECF0] capitalize">
-        What you get <span className="p-[2px] text-[1px] ml-[4px] mb-[1px] bg-[#EF5B44]"></span>
+    <div ref={container} onFocus={handleFocusAnim} className="px-[9.5vw]">
+      <h2 className="text-center leading-[100px] md:leading-[120px] text-2xl md:text-[32px] text-[#EAECF0] uppercase">
+        What you get{" "}
+        <span className="p-[2px] text-[1px] ml-[4px] mb-[1px] bg-[#EF5B44]"></span>
       </h2>
       <div className="grid gap-4 text-center text-white">
         <div className="list_item left-anim border-t border-[#475467] ">
@@ -41,20 +43,20 @@ export function Benefits() {
         </div>
         <div className="list_item right-anim border-t border-[#475467]">
           <h5 className="text-[28px] lg:text-[52px] py-7 leading-[40px] md:py-0 md:leading-[120px]">
-          Learn new skills and exchange ideas{" "}
+            Learn new skills and exchange ideas{" "}
           </h5>
         </div>
         <div className="list_item left-anim border-t border-[#475467] ">
           <h5 className="text-[28px] lg:text-[52px] leading-[90px] md:leading-[120px]">
-          Build a network{" "}
+            Build a network{" "}
           </h5>
         </div>
         <div className="list_item right-anim border-y border-[#475467] ">
           <h5 className="text-[28px] lg:text-[52px] leading-[90px] md:leading-[120px]">
-          Relax and have lots of fun{" "}
+            Relax and have lots of fun{" "}
           </h5>
         </div>
-          {/* <p className="text-sm text-[#7a7c86]">
+        {/* <p className="text-sm text-[#7a7c86]">
             Whether you're cd desktoplooking to expand your social circle, network with
             like-minded professionals, or simply make new friends,{" "}
             <span className="text-white/70 font-medium">Magno </span>
