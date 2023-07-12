@@ -201,7 +201,7 @@ export default function Home() {
             value={email}
             onChange={handleEmailChange}
             placeholder="Your email address"
-            className="w-full max-w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-3 rounded-lg"
+            className="w-full max-w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-2 md:py-3 rounded-lg"
           />
           <button
             type="submit"
