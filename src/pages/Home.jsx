@@ -162,8 +162,6 @@ export default function Home() {
               loading="lazy"
             />
           </div>
-          {/* </Carousel> */}
-          {/* </div> */}
         </section>
 
         {/* What you get */}
