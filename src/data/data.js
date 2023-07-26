@@ -116,4 +116,13 @@ export const items = [
   },
 ];
 
-export const events = [];
+
+import event2 from "../assets/events/event-1.jpg";
+
+export const events = [
+  
+  {
+    imgUrl: event2,
+    link: "https://tix.africa/buy/the-assembly-925c4575-f3c1-405e-a5eb-b2f6e6339b39"
+},
+];
