@@ -13,7 +13,8 @@ const AboutUs = lazy(() => import("./pages/AboutUs"));
 const Activities = lazy(() => import("./pages/Activities"));
 const Events = lazy(() => import("./pages/Events"));
 const Partnerships = lazy(() => import("./pages/Partnerships"));
-const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
+const JoinOurCommunity = lazy(() => import("./pages/JoinOurCommunity"));
+// const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
 // const Login = lazy(() => import("./pages/Login"));
 // const SignUp = lazy(() => import("./pages/SignUp"));
 
@@ -24,12 +25,14 @@ function App() {
         <ScrollToTop />
         <ToastContainer />
         <Suspense fallback={<Loader />}>
-        <Navbar />
+          <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/join" element={<JoinOurCommunity />} />
             <Route path="/partnerships" element={<Partnerships />} />
             {/* <Route path="/termsAndConditions" element={<TermsAndConditions />} /> */}
             {/* <Route path="/login" element={<Login />} />

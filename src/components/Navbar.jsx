@@ -104,6 +104,20 @@ export function Navbar() {
               Events
             </NavLink>
           </p>
+          <p
+            className="list_item"
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen((prevState) => !prevState);
+            }}
+          >
+            <NavLink
+              to="/join"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+            >
+              Join our community
+            </NavLink>
+          </p>
         </div>
 
         {/* CTA buttons */}
