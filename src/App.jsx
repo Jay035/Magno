@@ -21,10 +21,10 @@ function App() {
   return (
     <div className="scroll-smooth bg-[#06070B] text-white/90 h-full w-full">
       <Router>
-        <Navbar />
         <ScrollToTop />
         <ToastContainer />
         <Suspense fallback={<Loader />}>
+        <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/aboutUs" element={<AboutUs />} />
