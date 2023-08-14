@@ -36,11 +36,9 @@ export function Navbar() {
       className="flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-6 px-[9.5vw]"
     >
       <section>
-        {/* <Link to="/">
-          <h1 id="logo" className="text-2xl font-semibold w-fit">
-            Magno
-          </h1>
-        </Link> */}
+        <Link to="/">
+          <img className="w-20 md:w-28" src="/logo.jpg" alt="logo" />
+        </Link>
       </section>
       <section
         className={`${

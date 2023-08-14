@@ -4,7 +4,7 @@ export default function Loader() {
       id="loader"
       className="animate-pulse flex justify-center items-center min-h-screen"
     >
-      <h1 className="text-3xl md:text-5xl">Magno</h1>
+      <img className="w-28" src="/logo.jpg" alt="logo" />
     </div>
   );
 }

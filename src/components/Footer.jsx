@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-// import { BsTwitter } from "react-icons";
-export default function Footer() {
+export function Footer() {
   return (
     <section className="py-12 px-[9.5vw] text-center flex flex-col gap-12 border-t border-[#7a7c8670]">
       {/* footer logo */}

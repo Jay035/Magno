@@ -8,8 +8,6 @@ import asset2 from "../assets/img-2.jpg";
 import asset3 from "../assets/img-3.jpg";
 import asset4 from "../assets/img-4.jpg";
 import Contact from "../components/Contact";
-import { Navbar } from "../components/Navbar";
-import Footer from "../components/Footer";
 import { Power3, gsap } from "gsap";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -29,7 +27,7 @@ export default function Home() {
   const usersEmailRef = collection(db, "newsletter-emails");
 
   const handleEmailChange = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     setEmail(event.target.value);
   };
 
@@ -107,113 +105,102 @@ export default function Home() {
   // }, []);
 
   return (
-    <>
-      <Navbar />
+    <main className="home flex-col gap-6">
       <Transition />
-      <main className="home flex flex-col gap-6">
-        <HeroSection />
-        <section
-          ref={container}
-          className="text-center py-6 sm:py-14 "
-        >
-          <div className="px-[9.5vw] mb-20">
-            <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
-              Bringing people closer{" "}
-              <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
-            </h2>
-            <p className="text-[#D0D5DD] text-lg lg:text-2xl mb-8">
-              We curate a number of events and activities for discerning
-              individuals who enjoy getting together to explore new interests
-              and hobbies that helps them relax. Our events and activities are
-              exclusive, interactive, informative and fun.
-            </p>
-          </div>
-
-
-          <div className="card card_1">
-            <img
-              className="h-screen object-cover w-full object-center"
-              src={asset1}
-              alt="people having fun"
-              loading="lazy"
-            />
-          </div>
-          <div className="card card_2">
-            <img
-              className="h-screen object-cover w-full object-top"
-              src={asset2}
-              alt="people having fun"
-              loading="lazy"
-            />
-          </div>
-          <div className="card card_3">
-            <img
-              className="h-screen object-cover w-full object-center"
-              src={asset3}
-              alt="people having fun"
-              loading="lazy"
-            />
-          </div>
-          <div className="card card_4">
-            <img
-              className="h-screen object-cover w-full"
-              src={asset4}
-              alt="people having fun"
-              loading="lazy"
-            />
-          </div>
-        </section>
-
-        {/* What you get */}
-        <Benefits />
-
-        {/* Our events & activities */}
-        {/* <div className="px-6 md:px-24 mb-28 "> */}
-
-        <Link
-          to="/activities"
-          className="mb-28 mt-16 border text-center w-fit mx-auto border-[#EAECF0] py-2 rounded-[50px] px-8 md:px-[55px] text-[#EAECF0] text-base sm:text-xl md:text-2xl"
-        >
-          EXPLORE OUR ACTIVITIES
-        </Link>
-        {/* </div> */}
-
-        {/* How it works */}
-        <HowItWorks />
-        {/* Get Involved */}
-        {/* <GetInvolved /> */}
-
-        {/* Testimonials */}
-        <Testimonials />
-        <form
-          onSubmit={handleSubscribe}
-          className="pt-28 px-[9.5vw] text-center"
-        >
-          <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
-            Join Magno’s newsletter!
+      <HeroSection />
+      <section ref={container} className="text-center py-6 sm:py-14 ">
+        <div className="px-[9.5vw] mb-20">
+          <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
+            Bringing people closer{" "}
+            <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
           </h2>
-          <p className="text-base md:text-xl text-[#D0D5DD] mb-8">
-            Get news and updates delivered to your mailbox.
+          <p className="text-[#D0D5DD] text-lg lg:text-2xl mb-8">
+            We curate a number of events and activities for discerning
+            individuals who enjoy getting together to explore new interests and
+            hobbies that helps them relax. Our events and activities are
+            exclusive, interactive, informative and fun.
           </p>
-          <input
-            type="email"
-            name="user_email"
-            value={email}
-            onChange={handleEmailChange}
-            placeholder="Your email address"
-            className="w-full max-w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-2 md:py-3 rounded-lg"
+        </div>
+
+        <div className="card card_1">
+          <img
+            className="h-screen object-cover w-full object-center"
+            src={asset1}
+            alt="people having fun"
+            loading="lazy"
           />
-          <button
-            type="submit"
-            disabled={email === ""}
-            className="px-[62.5px] block w-fit mx-auto bg-[#EF5B44] rounded-[30px] py-3 mt-8 "
-          >
-            Subscribe
-          </button>
-        </form>
-        <Contact />
-      </main>
-      <Footer />
-    </>
+        </div>
+        <div className="card card_2">
+          <img
+            className="h-screen object-cover w-full object-top"
+            src={asset2}
+            alt="people having fun"
+            loading="lazy"
+          />
+        </div>
+        <div className="card card_3">
+          <img
+            className="h-screen object-cover w-full object-center"
+            src={asset3}
+            alt="people having fun"
+            loading="lazy"
+          />
+        </div>
+        <div className="card card_4">
+          <img
+            className="h-screen object-cover w-full"
+            src={asset4}
+            alt="people having fun"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      {/* What you get */}
+      <Benefits />
+
+      {/* Our events & activities */}
+      {/* <div className="px-6 md:px-24 mb-28 "> */}
+
+      <Link
+        to="/activities"
+        className="mb-28 mt-16 border text-center w-fit mx-auto border-[#EAECF0] py-2 rounded-[50px] px-8 md:px-[55px] text-[#EAECF0] text-base sm:text-xl md:text-2xl"
+      >
+        EXPLORE OUR ACTIVITIES
+      </Link>
+      {/* </div> */}
+
+      {/* How it works */}
+      <HowItWorks />
+      {/* Get Involved */}
+      {/* <GetInvolved /> */}
+
+      {/* Testimonials */}
+      <Testimonials />
+      <form onSubmit={handleSubscribe} className="pt-28 px-[9.5vw] text-center">
+        <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
+          Join Magno’s newsletter!
+        </h2>
+        <p className="text-base md:text-xl text-[#D0D5DD] mb-8">
+          Get news and updates delivered to your mailbox.
+        </p>
+        <input
+          type="email"
+          name="user_email"
+          value={email}
+          onChange={handleEmailChange}
+          placeholder="Your email address"
+          className="w-full max-w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-2 md:py-3 rounded-lg"
+        />
+        <button
+          type="submit"
+          disabled={email === ""}
+          className="px-[62.5px] block w-fit mx-auto bg-[#EF5B44] rounded-[30px] py-3 mt-8 "
+        >
+          Subscribe
+        </button>
+      </form>
+      <Contact />
+    </main>
   );
 }

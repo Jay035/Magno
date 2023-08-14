@@ -4,8 +4,9 @@ import Loader from "./components/Loader";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-
+import "react-toastify/dist/ReactToastify.css";
+import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
 
 const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="scroll-smooth bg-[#06070B] text-white/90 h-full w-full">
       <Router>
+        <Navbar />
         <ScrollToTop />
         <ToastContainer />
         <Suspense fallback={<Loader />}>
@@ -35,6 +37,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
+        <Footer />
       </Router>
     </div>
   );

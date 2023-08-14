@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import googleIcon from "../assets/google-icon.png";
 import FormValidation from "../formValidation/FormValidation";
-import { Navbar } from "../components/Navbar";
-import Footer from "../components/Footer";
 
 export default function SignUp() {
   const {
@@ -19,8 +17,6 @@ export default function SignUp() {
   } = FormValidation();
 
   return (
-    <>
-      <Navbar />
       <main className="container px-6 lg:px-14 max-w-lg mx-auto flex flex-col justify-center gap-3 w-full h-[90vh]">
         <h1 className="text-2xl font-semibold">Create an account</h1>
 
@@ -114,7 +110,5 @@ export default function SignUp() {
           </Link>
         </p>
       </main>
-      <Footer />
-    </>
   );
 }
