@@ -164,7 +164,7 @@ export default function Home() {
 
       <Link
         to="/activities"
-        className="mb-28 mt-16 border text-center w-fit mx-auto border-[#EAECF0] py-2 rounded-[50px] px-8 md:px-[55px] text-[#EAECF0] text-base sm:text-xl md:text-2xl"
+        className="mb-28 mt-16 border text-center w-fit flex mx-auto border-[#EAECF0] py-2 rounded-[50px] px-8 md:px-[55px] text-[#EAECF0] text-base sm:text-xl md:text-2xl"
       >
         EXPLORE OUR ACTIVITIES
       </Link>
