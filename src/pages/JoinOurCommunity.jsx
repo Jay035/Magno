@@ -3,8 +3,11 @@ import { addDoc, collection } from "@firebase/firestore";
 import Transition from "../components/Transition";
 import { db } from "../config/config";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function JoinOurCommunity() {
+  const navigate = useNavigate();
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [nameOfIndividual, setNameOfIndividual] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
@@ -20,10 +23,15 @@ export default function JoinOurCommunity() {
         phoneNo: phoneNo,
         country: country,
       });
-      toast.success(
-        "Congratulations, you have submitted the form. You should receive an email soon."
-      );
+      // toast.success(
+      //   "Congratulations, you have submitted the form. You should receive an email soon."
+      // );
+      window.scrollTo(0, 0);
+      setIsSubmitted(true);
       resetForm();
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
     } catch (err) {
       console.log(err.message);
       toast.error(err.message);
