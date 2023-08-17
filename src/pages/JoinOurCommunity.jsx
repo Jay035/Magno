@@ -9,8 +9,6 @@ export default function JoinOurCommunity() {
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [country, setCountry] = useState("");
-  const [favSport, setFavSport] = useState("");
-  const [stateOfResidence, setStateOfResidence] = useState("");
   const communityRef = collection(db, "community-members");
 
   const submitForm = async (e) => {
@@ -21,8 +19,6 @@ export default function JoinOurCommunity() {
         email: email,
         phoneNo: phoneNo,
         country: country,
-        favSport: favSport,
-        stateOfResidence: stateOfResidence,
       });
       toast.success(
         "Congratulations, you have submitted the form. You should receive an email soon."
@@ -39,8 +35,6 @@ export default function JoinOurCommunity() {
     setEmail("");
     setPhoneNo("");
     setCountry("");
-    setFavSport("");
-    setStateOfResidence("");
   };
 
   return (
@@ -116,26 +110,7 @@ export default function JoinOurCommunity() {
               required
             />
           </label>
-          <label htmlFor="stateOfResidence" className="flex flex-col gap-3">
-            <p>
-              State of residence<span className="text-[#F04438]">* </span>
-            </p>
-            <input
-              id="stateOfResidence"
-              type="text"
-              className="border outline-none text-white bg-white/10 border-[#7a7c86] rounded-lg px-2 py-1"
-              name="stateOfResidence"
-              value={stateOfResidence}
-              onChange={(e) => {
-                e.preventDefault();
-                setStateOfResidence(e.target.value);
-                console.log(stateOfResidence);
-              }}
-              required
-            />
-          </label>
-        </div>
-        <div className="grid lg:grid-cols-2 gap-3 gap-x-8 text-left">
+
           <label htmlFor="country" className="flex flex-col gap-3">
             <p>
               Country<span className="text-[#F04438]">* </span>
@@ -154,24 +129,6 @@ export default function JoinOurCommunity() {
               required
             />
           </label>
-          <label htmlFor="fav-sport" className="flex flex-col gap-3">
-            <p>
-              Favorite sport<span className="text-[#F04438]">*</span>
-            </p>
-            <input
-              id="fav-sport"
-              type="text"
-              className="border outline-none text-white bg-white/10 border-[#7a7c86] rounded-lg px-2 py-1"
-              name="fav-sport"
-              value={favSport}
-              onChange={(e) => {
-                e.preventDefault();
-                setFavSport(e.target.value);
-                console.log(favSport);
-              }}
-              required
-            />
-          </label>
         </div>
 
         <button
@@ -179,14 +136,12 @@ export default function JoinOurCommunity() {
             (nameOfIndividual === "") |
             (email === "") |
             (phoneNo === "") |
-            (favSport === "") |
-            (country === "") |
-            (stateOfResidence === "")
+            (country === "")
           }
           type="submit"
           className="w-fit mx-auto text-lg text-[#0e200a] font-medium mt-6 bg-[#EF5B44] disabled:bg-[#EF5B44]/50 hover:bg-[#EF5B44]/90 px-12 py-3 rounded-lg"
         >
-          Submit form
+          Submit
         </button>
       </form>
     </main>
