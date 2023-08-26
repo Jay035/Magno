@@ -15,7 +15,7 @@ export default function AboutUs() {
             We look to work with brands that are looking to partner or provide
             sponsorship to drive our vision of connecting people. Please get in
             touch by sending an email to{" "}
-            <a href="mailto:partnerships@magno.com">partnerships@magno.com</a>
+            <a href="mailto:partnerships@themagno.co">partnerships@themagno.co</a>
           </p>
         </section>
         <section>
