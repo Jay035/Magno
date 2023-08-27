@@ -53,8 +53,7 @@ export default function JoinOurCommunity() {
         <span className="p-[3px] text-[1px] ml-[4px] mb-[1px] bg-[#EF5B44]"></span>
       </h2>
       <p className="text-base md:text-xl text-[#D0D5DD] mb-8">
-        Join the biggest community for networking with great minds and enjoy
-        access to exclusive experiences.
+        Join our community and enjoy access to exclusive experiences.
       </p>
       <form
         className="flex flex-col justify-center gap-4"
